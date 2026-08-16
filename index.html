@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
   <meta charset="UTF-8">
 
-  <!-- Google/Search Engine information -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Whispers & Verses | A Poetry Collection</title>
+
+  <title>Vaibhav Poetry | शायरी, कविताएँ और Quotes</title>
+
   <meta
     name="description"
-    content="Whispers & Verses is a collection of heartfelt poetry about love, life, nature, dreams and the human soul."
+    content="Vaibhav Poetry — दिल से लिखी शायरियाँ, कविताएँ और खूबसूरत Quotes. पढ़िए शब्दों में छिपे एहसास।"
   >
+
   <meta
     name="keywords"
-    content="poetry, poems, love poems, life poems, nature poetry, romantic poetry, poetry collection"
+    content="Vaibhav Poetry, हिंदी शायरी, हिंदी कविता, quotes, love shayari, emotional shayari, Hindi poetry"
   >
-  <meta name="author" content="Your Name">
+
+  <meta name="author" content="Vaibhav">
 
   <style>
+
+    /* =========================
+       BASIC RESET
+    ========================== */
+
     * {
       margin: 0;
       padding: 0;
@@ -28,648 +36,1371 @@
     }
 
     body {
-      font-family: Georgia, "Times New Roman", serif;
-      color: #332b35;
-      background: #fbf7f1;
+      font-family:
+        "Noto Serif Devanagari",
+        "Mangal",
+        Georgia,
+        serif;
+
+      background: #0d0b12;
+      color: #f7edf2;
       line-height: 1.8;
     }
 
-    /* NAVIGATION */
+    ::selection {
+      background: #d99ab5;
+      color: #160d13;
+    }
+
+
+    /* =========================
+       NAVBAR
+    ========================== */
+
     nav {
       position: fixed;
       top: 0;
+      left: 0;
       width: 100%;
+
       z-index: 1000;
-      background: rgba(251, 247, 241, 0.94);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #e8ddd2;
+
+      background: rgba(13, 11, 18, 0.88);
+      backdrop-filter: blur(15px);
+
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     .nav-container {
-      max-width: 1100px;
+      max-width: 1150px;
       margin: auto;
+
       padding: 15px 25px;
+
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
     }
 
     .logo {
-      font-size: 1.4rem;
-      color: #713f58;
+      color: #f1b4ca;
+      font-size: 1.5rem;
       font-weight: bold;
+
+      letter-spacing: 1px;
     }
 
-    nav a {
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: #ddd0d6;
       text-decoration: none;
-      color: #4d4149;
-      margin-left: 25px;
+
       font-size: 0.95rem;
+
+      transition: 0.3s;
     }
 
-    nav a:hover {
-      color: #a65d7a;
+    .nav-links a:hover {
+      color: #f1a9c5;
     }
 
-    /* HERO */
+
+    /* =========================
+       HERO
+    ========================== */
+
     .hero {
       min-height: 100vh;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       text-align: center;
-      padding: 120px 25px 80px;
+
+      padding: 130px 25px 80px;
+
+      position: relative;
+      overflow: hidden;
+
       background:
-        radial-gradient(circle at top left, #ead9df 0, transparent 35%),
-        radial-gradient(circle at bottom right, #e6d9c5 0, transparent 35%),
-        #fbf7f1;
+        radial-gradient(
+          circle at 20% 20%,
+          rgba(148, 65, 104, 0.25),
+          transparent 35%
+        ),
+
+        radial-gradient(
+          circle at 80% 80%,
+          rgba(80, 63, 130, 0.25),
+          transparent 35%
+        ),
+
+        #0d0b12;
+    }
+
+    .hero::before {
+      content: "✦";
+
+      position: absolute;
+
+      top: 20%;
+      left: 15%;
+
+      color: rgba(255,255,255,0.12);
+
+      font-size: 50px;
+
+      animation: float 5s infinite ease-in-out;
+    }
+
+    .hero::after {
+      content: "✧";
+
+      position: absolute;
+
+      bottom: 20%;
+      right: 15%;
+
+      color: rgba(255,255,255,0.12);
+
+      font-size: 60px;
+
+      animation: float 6s infinite ease-in-out reverse;
+    }
+
+    @keyframes float {
+
+      0%,100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-20px);
+      }
     }
 
     .hero-content {
       max-width: 850px;
+      position: relative;
+      z-index: 2;
     }
 
-    .small-title {
+    .eyebrow {
+      color: #e39db9;
+
       text-transform: uppercase;
-      letter-spacing: 4px;
+
+      letter-spacing: 5px;
+
       font-size: 0.8rem;
-      color: #a65d7a;
+
       margin-bottom: 20px;
     }
 
-    h1 {
-      font-size: clamp(3rem, 8vw, 6.5rem);
-      line-height: 1;
-      color: #3f2d38;
+    .hero h1 {
+      font-size: clamp(3.5rem, 9vw, 7rem);
+
+      line-height: 1.05;
+
+      background:
+        linear-gradient(
+          120deg,
+          #ffffff,
+          #f0b3ca,
+          #c892e0
+        );
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
       margin-bottom: 25px;
     }
 
-    .hero p {
-      max-width: 650px;
-      margin: auto;
+    .hero-subtitle {
+      color: #c9bbc2;
+
       font-size: 1.2rem;
-      color: #6e6268;
+
+      max-width: 650px;
+
+      margin: auto;
+
       font-style: italic;
+    }
+
+    .hero-buttons {
+      margin-top: 35px;
+
+      display: flex;
+
+      justify-content: center;
+
+      gap: 15px;
+
+      flex-wrap: wrap;
     }
 
     .button {
       display: inline-block;
-      margin-top: 35px;
-      padding: 13px 28px;
-      background: #713f58;
-      color: white;
+
+      padding: 12px 27px;
+
       border-radius: 30px;
+
       text-decoration: none;
+
       transition: 0.3s;
-      border: none;
-      cursor: pointer;
+
       font-family: inherit;
-      font-size: 1rem;
     }
 
-    .button:hover {
-      background: #a65d7a;
-      transform: translateY(-2px);
+    .primary-button {
+      background: #b65f82;
+
+      color: white;
     }
 
-    /* GENERAL */
+    .primary-button:hover {
+      background: #d2789c;
+
+      transform: translateY(-3px);
+    }
+
+    .secondary-button {
+      border: 1px solid #6f5361;
+
+      color: #e4d6dc;
+    }
+
+    .secondary-button:hover {
+      border-color: #d2789c;
+
+      color: #f1a9c5;
+    }
+
+
+    /* =========================
+       GENERAL SECTION
+    ========================== */
+
     section {
       padding: 90px 25px;
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1150px;
       margin: auto;
     }
 
-    .section-title {
+    .section-heading {
       text-align: center;
-      font-size: 2.7rem;
-      color: #493540;
-      margin-bottom: 12px;
-    }
 
-    .section-subtitle {
-      text-align: center;
-      color: #81747a;
       margin-bottom: 45px;
     }
 
-    /* SEARCH */
-    .search-box {
-      max-width: 600px;
-      margin: 0 auto 35px;
+    .section-heading span {
+      color: #d783a5;
+
+      font-size: 0.8rem;
+
+      letter-spacing: 4px;
     }
 
-    .search-box input {
+    .section-heading h2 {
+      font-size: 2.7rem;
+
+      color: #f6e7ed;
+
+      margin-top: 8px;
+    }
+
+    .section-heading p {
+      color: #998b93;
+
+      margin-top: 8px;
+    }
+
+
+    /* =========================
+       SEARCH
+    ========================== */
+
+    .search-wrapper {
+      max-width: 650px;
+
+      margin: 0 auto 45px;
+
+      position: relative;
+    }
+
+    .search-wrapper input {
       width: 100%;
-      padding: 16px 20px;
-      border: 1px solid #dfd0d4;
-      border-radius: 30px;
-      background: white;
+
+      padding: 17px 25px;
+
+      border-radius: 40px;
+
+      border: 1px solid #493640;
+
+      background: #17131c;
+
+      color: white;
+
       font-family: inherit;
+
       font-size: 1rem;
+
       outline: none;
-    }
 
-    .search-box input:focus {
-      border-color: #a65d7a;
-    }
-
-    /* POEMS */
-    .poems {
-      background: #f5eee7;
-    }
-
-    .poem-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .poem-card {
-      background: #fffdf9;
-      padding: 30px;
-      border-radius: 14px;
-      border: 1px solid #eadfd6;
-      box-shadow: 0 10px 30px rgba(65, 44, 50, 0.06);
       transition: 0.3s;
     }
 
-    .poem-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 15px 35px rgba(65, 44, 50, 0.12);
+    .search-wrapper input:focus {
+      border-color: #c97899;
+
+      box-shadow:
+        0 0 20px rgba(201,120,153,0.15);
     }
 
-    .poem-category {
-      color: #a65d7a;
-      text-transform: uppercase;
-      font-size: 0.72rem;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
+
+    /* =========================
+       CATEGORY BUTTONS
+    ========================== */
+
+    .categories {
+      display: flex;
+
+      justify-content: center;
+
+      gap: 10px;
+
+      flex-wrap: wrap;
+
+      margin-bottom: 40px;
     }
 
-    .poem-card h3 {
-      font-size: 1.7rem;
-      color: #493540;
-      margin-bottom: 15px;
-    }
+    .category-btn {
+      background: #17131c;
 
-    .poem-preview {
-      color: #70656a;
-      font-style: italic;
-    }
+      border: 1px solid #3e3039;
 
-    .poem-full {
-      display: none;
-      white-space: pre-line;
-      margin-top: 20px;
-      color: #50464b;
-    }
+      color: #cdbdc5;
 
-    .read-button {
-      margin-top: 20px;
-      background: transparent;
-      border: 1px solid #a65d7a;
-      color: #8a4c67;
-      padding: 8px 17px;
-      border-radius: 20px;
+      padding: 8px 18px;
+
+      border-radius: 25px;
+
       cursor: pointer;
+
       font-family: inherit;
+
+      transition: 0.3s;
     }
 
-    .read-button:hover {
-      background: #a65d7a;
+    .category-btn:hover,
+    .category-btn.active {
+      background: #b65f82;
+
+      border-color: #b65f82;
+
       color: white;
     }
 
-    /* ABOUT */
+
+    /* =========================
+       CARDS
+    ========================== */
+
+    .cards {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 25px;
+    }
+
+    .card {
+      background:
+        linear-gradient(
+          145deg,
+          #19151d,
+          #110e14
+        );
+
+      border: 1px solid #30252d;
+
+      border-radius: 18px;
+
+      padding: 30px;
+
+      position: relative;
+
+      overflow: hidden;
+
+      transition: 0.35s;
+    }
+
+    .card::before {
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 3px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #b65f82,
+          #8b6cc4
+        );
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+
+      border-color: #654352;
+
+      box-shadow:
+        0 20px 50px rgba(0,0,0,0.35);
+    }
+
+    .card-category {
+      color: #d47e9f;
+
+      font-size: 0.72rem;
+
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      color: #f5dfe8;
+
+      font-size: 1.6rem;
+
+      margin-bottom: 15px;
+    }
+
+    .preview {
+      color: #b6a7ae;
+
+      font-style: italic;
+
+      min-height: 75px;
+    }
+
+    .full-text {
+      display: none;
+
+      white-space: pre-line;
+
+      color: #d6c8ce;
+
+      margin-top: 20px;
+
+      padding-top: 20px;
+
+      border-top: 1px solid #30252d;
+    }
+
+    .read-btn {
+      margin-top: 20px;
+
+      background: transparent;
+
+      color: #e39bb7;
+
+      border: 1px solid #74485c;
+
+      border-radius: 25px;
+
+      padding: 8px 18px;
+
+      cursor: pointer;
+
+      font-family: inherit;
+
+      transition: 0.3s;
+    }
+
+    .read-btn:hover {
+      background: #b65f82;
+
+      color: white;
+
+      border-color: #b65f82;
+    }
+
+
+    /* =========================
+       QUOTE SECTION
+    ========================== */
+
+    .quote-section {
+      background:
+        linear-gradient(
+          135deg,
+          #241522,
+          #171321
+        );
+
+      text-align: center;
+    }
+
+    .quote {
+      max-width: 850px;
+
+      margin: auto;
+
+      font-size:
+        clamp(1.6rem, 4vw, 2.6rem);
+
+      color: #f2dce5;
+
+      font-style: italic;
+
+      line-height: 1.6;
+    }
+
+    .quote-author {
+      margin-top: 20px;
+
+      color: #c77899;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================== */
+
     .about {
       text-align: center;
     }
 
-    .about-text {
+    .about-box {
       max-width: 750px;
+
       margin: auto;
-      font-size: 1.15rem;
-      color: #6c6066;
+
+      background: #151119;
+
+      border: 1px solid #30252d;
+
+      padding: 40px;
+
+      border-radius: 20px;
     }
 
-    /* QUOTE */
-    .quote {
-      background: #713f58;
-      color: white;
-      text-align: center;
+    .about-box p {
+      color: #b9aab1;
+
+      font-size: 1.08rem;
     }
 
-    .quote blockquote {
-      max-width: 800px;
-      margin: auto;
-      font-size: clamp(1.6rem, 4vw, 2.7rem);
-      font-style: italic;
-      line-height: 1.5;
-    }
 
-    .quote cite {
-      display: block;
-      margin-top: 20px;
-      opacity: 0.75;
-    }
+    /* =========================
+       FOOTER
+    ========================== */
 
-    /* FOOTER */
     footer {
-      background: #30242b;
-      color: #d9ccd1;
+      background: #08070b;
+
+      border-top: 1px solid #211a21;
+
       text-align: center;
+
       padding: 40px 20px;
+
+      color: #81747c;
     }
 
-    footer a {
-      color: #e9b8cb;
-      text-decoration: none;
+    footer strong {
+      color: #d98aa7;
     }
 
-    /* RESPONSIVE */
-    @media (max-width: 800px) {
-      .poem-grid {
-        grid-template-columns: 1fr 1fr;
-      }
 
-      nav a {
-        margin-left: 10px;
-      }
+    /* =========================
+       NO RESULTS
+    ========================== */
+
+    #noResults {
+      display: none;
+
+      text-align: center;
+
+      color: #95878e;
+
+      padding: 30px;
     }
 
-    @media (max-width: 550px) {
-      .poem-grid {
-        grid-template-columns: 1fr;
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 850px) {
+
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
       }
+
+    }
+
+    @media (max-width: 600px) {
 
       .nav-container {
         flex-direction: column;
-        gap: 8px;
+
+        gap: 10px;
       }
 
-      nav a {
-        font-size: 0.85rem;
+      .nav-links {
+        gap: 15px;
+      }
+
+      .nav-links a {
+        font-size: 0.82rem;
       }
 
       .hero {
-        padding-top: 150px;
+        padding-top: 160px;
       }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading h2 {
+        font-size: 2.2rem;
+      }
+
+      .about-box {
+        padding: 25px;
+      }
+
     }
+
   </style>
 </head>
 
+
 <body>
 
-  <!-- NAVIGATION -->
-  <nav>
-    <div class="nav-container">
-      <div class="logo">Whispers & Verses</div>
 
-      <div>
-        <a href="#home">Home</a>
-        <a href="#poems">Poems</a>
-        <a href="#about">About</a>
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
+
+  <nav>
+
+    <div class="nav-container">
+
+      <div class="logo">
+        ✦ Vaibhav Poetry
       </div>
+
+      <div class="nav-links">
+
+        <a href="#home">होम</a>
+
+        <a href="#shayari">शायरियाँ</a>
+
+        <a href="#poems">कविताएँ</a>
+
+        <a href="#quotes">Quotes</a>
+
+        <a href="#about">मेरे बारे में</a>
+
+      </div>
+
     </div>
+
   </nav>
 
 
-  <!-- HERO -->
+  <!-- =========================
+       HERO
+  ========================== -->
+
   <section class="hero" id="home">
+
     <div class="hero-content">
 
-      <div class="small-title">A collection of words & feelings</div>
+      <div class="eyebrow">
+        शब्दों में छिपे एहसास
+      </div>
 
-      <h1>Whispers &<br>Verses</h1>
+      <h1>
+        Vaibhav<br>Poetry
+      </h1>
 
-      <p>
-        "Some feelings are too deep for conversation,
-        so we turn them into poetry."
+      <p class="hero-subtitle">
+        "कुछ एहसास शब्दों में नहीं कहे जाते,
+        उन्हें बस महसूस किया जाता है।"
       </p>
 
-      <a href="#poems" class="button">Explore the Poems</a>
+      <div class="hero-buttons">
+
+        <a
+          href="#shayari"
+          class="button primary-button"
+        >
+          शायरियाँ पढ़ें
+        </a>
+
+        <a
+          href="#poems"
+          class="button secondary-button"
+        >
+          कविताएँ देखें
+        </a>
+
+      </div>
 
     </div>
+
   </section>
 
 
-  <!-- POEMS -->
-  <section class="poems" id="poems">
+  <!-- =========================
+       SHAYARI
+  ========================== -->
+
+  <section id="shayari">
 
     <div class="container">
 
-      <h2 class="section-title">The Poetry</h2>
+      <div class="section-heading">
 
-      <p class="section-subtitle">
-        Words for the moments we cannot explain.
-      </p>
+        <span>SHAYARI</span>
 
-      <div class="search-box">
+        <h2>शायरियाँ</h2>
+
+        <p>
+          कुछ शब्द, कुछ एहसास और बहुत सारी बातें।
+        </p>
+
+      </div>
+
+
+      <!-- SEARCH -->
+
+      <div class="search-wrapper">
+
         <input
           type="text"
-          id="search"
-          placeholder="Search poems..."
-          onkeyup="searchPoems()"
+          id="searchInput"
+          placeholder="🔍 शायरी, कविता या Quote खोजें..."
+          onkeyup="searchContent()"
         >
+
       </div>
 
 
-      <div class="poem-grid">
-
-        <!-- POEM 1 -->
-        <article class="poem-card">
-
-          <div class="poem-category">Love</div>
-
-          <h3>Where You Are</h3>
-
-          <p class="poem-preview">
-            "I found a little piece of home
-            in the sound of your name..."
-          </p>
-
-          <div class="poem-full">
-I found a little piece of home
-in the sound of your name.
-
-A quiet place inside my heart
-where nothing stays the same.
-
-And when the world becomes too loud,
-I think of you once more—
-
-For somehow every road I take
-still leads me to your door.
-          </div>
-
-          <button class="read-button" onclick="togglePoem(this)">
-            Read poem
-          </button>
-
-        </article>
-
-
-        <!-- POEM 2 -->
-        <article class="poem-card">
-
-          <div class="poem-category">Life</div>
-
-          <h3>Keep Walking</h3>
-
-          <p class="poem-preview">
-            "The road does not promise easy days,
-            only another sunrise..."
-          </p>
-
-          <div class="poem-full">
-The road does not promise easy days,
-only another sunrise.
-
-So carry your scars,
-carry your dreams,
-and keep walking.
-
-There are flowers
-you have not seen,
-
-and skies
-you have not yet watched
-turn gold.
-          </div>
-
-          <button class="read-button" onclick="togglePoem(this)">
-            Read poem
-          </button>
-
-        </article>
-
-
-        <!-- POEM 3 -->
-        <article class="poem-card">
-
-          <div class="poem-category">Nature</div>
-
-          <h3>After Rain</h3>
-
-          <p class="poem-preview">
-            "The earth remembers how to breathe
-            after the rain..."
-          </p>
-
-          <div class="poem-full">
-The earth remembers how to breathe
-after the rain.
-
-Leaves hold little mirrors
-of the morning sky.
-
-The wind becomes softer,
-the streets become silver,
-
-and for a moment
-the whole world
-feels new again.
-          </div>
-
-          <button class="read-button" onclick="togglePoem(this)">
-            Read poem
-          </button>
-
-        </article>
-
-
-        <!-- POEM 4 -->
-        <article class="poem-card">
-
-          <div class="poem-category">Dreams</div>
-
-          <h3>Someday</h3>
-
-          <p class="poem-preview">
-            "Someday the things you dream about
-            will become memories..."
-          </p>
-
-          <div class="poem-full">
-Someday the things you dream about
-will become memories.
-
-The places you imagined
-will have roads beneath your feet.
-
-So dream without apology.
-
-The future has room
-for every beautiful thing
-you dare to believe.
-          </div>
-
-          <button class="read-button" onclick="togglePoem(this)">
-            Read poem
-          </button>
-
-        </article>
-
-
-        <!-- POEM 5 -->
-        <article class="poem-card">
-
-          <div class="poem-category">Night</div>
-
-          <h3>Moonlight</h3>
-
-          <p class="poem-preview">
-            "The moon never asks the night
-            to be anything but dark..."
-          </p>
-
-          <div class="poem-full">
-The moon never asks the night
-to be anything but dark.
-
-It simply shines,
-
-quietly reminding us
-that even darkness
-can hold a little light.
-          </div>
-
-          <button class="read-button" onclick="togglePoem(this)">
-            Read poem
-          </button>
-
-        </article>
-
-
-        <!-- POEM 6 -->
-        <article class="poem-card">
-
-          <div class="poem-category">Hope</div>
-
-          <h3>Begin Again</h3>
-
-          <p class="poem-preview">
-            "There is no shame in beginning again..."
-          </p>
-
-          <div class="poem-full">
-There is no shame
-in beginning again.
-
-A broken heart
-can still learn to sing.
-
-A tired soul
-can still find morning.
-
-And a life
-can change direction
-with one brave step.
-          </div>
-
-          <button class="read-button" onclick="togglePoem(this)">
-            Read poem
-          </button>
-
-        </article>
+      <!-- CATEGORY BUTTONS -->
+
+      <div class="categories">
+
+        <button
+          class="category-btn active"
+          onclick="filterContent('all', this)"
+        >
+          सभी
+        </button>
+
+        <button
+          class="category-btn"
+          onclick="filterContent('shayari', this)"
+        >
+          शायरियाँ
+        </button>
+
+        <button
+          class="category-btn"
+          onclick="filterContent('poem', this)"
+        >
+          कविताएँ
+        </button>
+
+        <button
+          class="category-btn"
+          onclick="filterContent('quote', this)"
+        >
+          Quotes
+        </button>
 
       </div>
+
+
+      <div class="cards" id="contentCards">
+
+
+        <!-- =====================
+             SHAYARI 1
+        ====================== -->
+
+        <article
+          class="card"
+          data-category="shayari"
+        >
+
+          <div class="card-category">
+            शायरी
+          </div>
+
+          <h3>
+            इंसान
+          </h3>
+
+          <p class="preview">
+            "कहाँ लिखा था उसने कि मुझे तू एक जीव कुर्बान कर..."
+          </p>
+
+          <div class="full-text">
+
+कहाँ लिखा था उसने कि मुझे तू एक जीव कुर्बान कर,
+
+ऐ इंसान, अपने स्वाद की ख़ातिर
+कर डाला उसे बदनाम।
+
+          </div>
+
+          <button
+            class="read-btn"
+            onclick="toggleText(this)"
+          >
+            पूरी शायरी पढ़ें
+          </button>
+
+        </article>
+
+
+        <!-- =====================
+             POEM 1
+        ====================== -->
+
+        <article
+          class="card"
+          data-category="poem"
+        >
+
+          <div class="card-category">
+            कविता
+          </div>
+
+          <h3>
+            शुरुआत
+          </h3>
+
+          <p class="preview">
+            "हर अंत के बाद कहीं न कहीं
+            एक नई शुरुआत होती है..."
+          </p>
+
+          <div class="full-text">
+
+हर अंत के बाद
+कहीं न कहीं
+एक नई शुरुआत होती है।
+
+बस ज़रूरत है
+थोड़ा ठहरने की,
+
+थोड़ा खुद को समझने की,
+
+और फिर
+एक कदम आगे बढ़ाने की।
+
+          </div>
+
+          <button
+            class="read-btn"
+            onclick="toggleText(this)"
+          >
+            पूरी कविता पढ़ें
+          </button>
+
+        </article>
+
+
+        <!-- =====================
+             QUOTE 1
+        ====================== -->
+
+        <article
+          class="card"
+          data-category="quote"
+        >
+
+          <div class="card-category">
+            Quote
+          </div>
+
+          <h3>
+            एक बात
+          </h3>
+
+          <p class="preview">
+            "जो दिल से लिखा जाता है,
+            वह दिल तक ज़रूर पहुँचता है।"
+          </p>
+
+          <div class="full-text">
+
+"जो दिल से लिखा जाता है,
+वह दिल तक ज़रूर पहुँचता है।"
+
+          </div>
+
+          <button
+            class="read-btn"
+            onclick="toggleText(this)"
+          >
+            Quote पढ़ें
+          </button>
+
+        </article>
+
+
+      </div>
+
+
+      <div id="noResults">
+        कोई शायरी या कविता नहीं मिली।
+      </div>
+
     </div>
-  </section>
-
-
-  <!-- QUOTE -->
-  <section class="quote">
-
-    <blockquote>
-      "Poetry is the place where the heart
-      gets to speak without interruption."
-    </blockquote>
-
-    <cite>— Whispers & Verses</cite>
 
   </section>
 
 
-  <!-- ABOUT -->
-  <section class="about" id="about">
+  <!-- =========================
+       FEATURED QUOTE
+  ========================== -->
+
+  <section
+    class="quote-section"
+    id="quotes"
+  >
 
     <div class="container">
 
-      <h2 class="section-title">About This Collection</h2>
+      <div class="section-heading">
 
-      <p class="section-subtitle">
-        A small corner of the internet for big feelings.
-      </p>
+        <span>QUOTES</span>
 
-      <p class="about-text">
-        Welcome to Whispers & Verses — a collection of poetry
-        inspired by love, life, nature, dreams, heartbreak and hope.
-        Add your own poems and make this space uniquely yours.
-      </p>
+        <h2>आज का ख़याल</h2>
+
+      </div>
+
+      <div class="quote">
+
+        “कुछ बातें कहने के लिए
+        आवाज़ की नहीं,
+        सिर्फ़ एहसास की ज़रूरत होती है।”
+
+      </div>
+
+      <div class="quote-author">
+        — Vaibhav Poetry
+      </div>
 
     </div>
 
   </section>
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       POEMS
+  ========================== -->
+
+  <section id="poems">
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <span>POETRY</span>
+
+        <h2>कविताओं की दुनिया</h2>
+
+        <p>
+          जहाँ शब्द भावनाओं का रूप ले लेते हैं।
+        </p>
+
+      </div>
+
+
+      <div class="cards">
+
+
+        <article
+          class="card"
+          data-category="poem"
+        >
+
+          <div class="card-category">
+            कविता
+          </div>
+
+          <h3>
+            खामोशी
+          </h3>
+
+          <p class="preview">
+            "कभी-कभी खामोशी भी
+            बहुत कुछ कह जाती है..."
+          </p>
+
+          <div class="full-text">
+
+कभी-कभी खामोशी भी
+बहुत कुछ कह जाती है,
+
+जो बातें होंठ नहीं कह पाते
+वो आँखें कह जाती हैं।
+
+और कुछ रिश्ते
+बिना किसी वादे के भी
+दिल में रह जाते हैं।
+
+          </div>
+
+          <button
+            class="read-btn"
+            onclick="toggleText(this)"
+          >
+            पूरी कविता पढ़ें
+          </button>
+
+        </article>
+
+
+        <article
+          class="card"
+          data-category="poem"
+        >
+
+          <div class="card-category">
+            कविता
+          </div>
+
+          <h3>
+            सफ़र
+          </h3>
+
+          <p class="preview">
+            "मंज़िल से ज्यादा खूबसूरत
+            कभी-कभी सफ़र होता है..."
+          </p>
+
+          <div class="full-text">
+
+मंज़िल से ज्यादा खूबसूरत
+कभी-कभी सफ़र होता है,
+
+कुछ लोग मिलते हैं,
+कुछ पीछे छूट जाते हैं,
+
+और इन्हीं मुलाकातों से
+ज़िंदगी का मतलब
+समझ आता है।
+
+          </div>
+
+          <button
+            class="read-btn"
+            onclick="toggleText(this)"
+          >
+            पूरी कविता पढ़ें
+          </button>
+
+        </article>
+
+
+        <article
+          class="card"
+          data-category="poem"
+        >
+
+          <div class="card-category">
+            कविता
+          </div>
+
+          <h3>
+            उम्मीद
+          </h3>
+
+          <p class="preview">
+            "अंधेरा चाहे कितना भी हो,
+            सुबह जरूर आती है..."
+          </p>
+
+          <div class="full-text">
+
+अंधेरा चाहे कितना भी हो,
+
+सुबह जरूर आती है।
+
+टूटी हुई उम्मीदों में भी
+कहीं न कहीं
+एक नई रोशनी छुपी होती है।
+
+बस इंतज़ार करो,
+वक़्त बदलता जरूर है।
+
+          </div>
+
+          <button
+            class="read-btn"
+            onclick="toggleText(this)"
+          >
+            पूरी कविता पढ़ें
+          </button>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       ABOUT
+  ========================== -->
+
+  <section
+    class="about"
+    id="about"
+  >
+
+    <div class="container">
+
+      <div class="section-heading">
+
+        <span>ABOUT</span>
+
+        <h2>Vaibhav Poetry के बारे में</h2>
+
+      </div>
+
+      <div class="about-box">
+
+        <p>
+
+          स्वागत है <strong>Vaibhav Poetry</strong> में —
+          एक ऐसी जगह जहाँ शब्द सिर्फ़ पढ़े नहीं,
+          महसूस किए जाते हैं।
+
+          <br><br>
+
+          यहाँ आपको शायरियाँ, कविताएँ और Quotes मिलेंगे
+          जो प्यार, ज़िंदगी, रिश्तों, खामोशी,
+          उम्मीद और इंसानी एहसासों को शब्द देते हैं।
+
+          <br><br>
+
+          <strong>
+            पढ़िए। महसूस कीजिए। और अपने एहसासों को शब्द दीजिए।
+          </strong>
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
   <footer>
 
-    <p>© 2026 Whispers & Verses</p>
+    <p>
+      © 2026 <strong>Vaibhav Poetry</strong>
+    </p>
 
     <p>
-      Made with words, silence and a little bit of imagination.
+      शब्दों से दिल तक ❤️
     </p>
 
   </footer>
 
 
-  <!-- JAVASCRIPT -->
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
   <script>
 
-    function togglePoem(button) {
 
-      const poem = button.previousElementSibling;
+    /* =========================
+       READ MORE
+    ========================== */
 
-      if (poem.style.display === "block") {
+    function toggleText(button) {
 
-        poem.style.display = "none";
-        button.textContent = "Read poem";
+      const text =
+        button.previousElementSibling;
+
+      if (
+        text.style.display === "block"
+      ) {
+
+        text.style.display = "none";
+
+        button.textContent =
+          button.textContent.includes("Quote")
+            ? "Quote पढ़ें"
+            : button.textContent.includes("कविता")
+              ? "पूरी कविता पढ़ें"
+              : "पूरी शायरी पढ़ें";
 
       } else {
 
-        poem.style.display = "block";
-        button.textContent = "Hide poem";
+        text.style.display = "block";
+
+        button.textContent =
+          "कम पढ़ें";
 
       }
+
     }
 
 
-    function searchPoems() {
+    /* =========================
+       SEARCH
+    ========================== */
+
+    function searchContent() {
 
       const search =
-        document.getElementById("search").value.toLowerCase();
+        document
+          .getElementById("searchInput")
+          .value
+          .toLowerCase()
+          .trim();
 
-      const poems =
-        document.querySelectorAll(".poem-card");
+      const cards =
+        document.querySelectorAll(".card");
 
-      poems.forEach(function(poem) {
+      let found = 0;
 
-        const text = poem.innerText.toLowerCase();
+      cards.forEach(function(card) {
 
-        if (text.includes(search)) {
-          poem.style.display = "";
+        const content =
+          card.innerText.toLowerCase();
+
+        if (
+          content.includes(search)
+        ) {
+
+          card.style.display = "";
+
+          found++;
+
         } else {
-          poem.style.display = "none";
+
+          card.style.display = "none";
+
         }
 
       });
 
+
+      document.getElementById(
+        "noResults"
+      ).style.display =
+        found === 0
+          ? "block"
+          : "none";
+
     }
+
+
+    /* =========================
+       CATEGORY FILTER
+    ========================== */
+
+    function filterContent(
+      category,
+      button
+    ) {
+
+      const buttons =
+        document.querySelectorAll(
+          ".category-btn"
+        );
+
+      buttons.forEach(function(btn) {
+
+        btn.classList.remove("active");
+
+      });
+
+      button.classList.add("active");
+
+
+      const cards =
+        document.querySelectorAll(".card");
+
+      let found = 0;
+
+
+      cards.forEach(function(card) {
+
+        if (
+          category === "all" ||
+          card.dataset.category === category
+        ) {
+
+          card.style.display = "";
+
+          found++;
+
+        } else {
+
+          card.style.display = "none";
+
+        }
+
+      });
+
+
+      document.getElementById(
+        "noResults"
+      ).style.display =
+        found === 0
+          ? "block"
+          : "none";
+
+
+      /* Clear search */
+
+      document.getElementById(
+        "searchInput"
+      ).value = "";
+
+    }
+
 
   </script>
 
