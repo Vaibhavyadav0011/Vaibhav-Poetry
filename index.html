@@ -5,24 +5,24 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Vaibhav Poetry | शायरी, कविताएँ और Quotes</title>
+  <title>Vaibhav Poetry | शायरी, कविताएँ और विचार</title>
 
   <meta
     name="description"
-    content="Vaibhav Poetry — दिल से लिखी शायरियाँ, कविताएँ और खूबसूरत Quotes. पढ़िए शब्दों में छिपे एहसास।"
+    content="Vaibhav Poetry — वैभव यादव द्वारा लिखी गई शायरियाँ, कविताएँ, विचार और सत्य, समाज, प्रेम तथा जीवन से जुड़ी रचनाएँ।"
   >
 
   <meta
     name="keywords"
-    content="Vaibhav Poetry, हिंदी शायरी, हिंदी कविता, quotes, love shayari, emotional shayari, Hindi poetry"
+    content="Vaibhav Poetry, Vaibhav Yadav, वैभव यादव, हिंदी कविता, हिंदी शायरी, सत्य की असली पहचान, अंधविश्वास, दान, इश्क, हिंदी कविता संग्रह"
   >
 
-  <meta name="author" content="Vaibhav">
+  <meta name="author" content="Vaibhav Yadav">
 
   <style>
 
     /* =========================
-       BASIC RESET
+       RESET
     ========================== */
 
     * {
@@ -42,14 +42,14 @@
         Georgia,
         serif;
 
-      background: #0d0b12;
+      background: #0b0910;
       color: #f7edf2;
-      line-height: 1.8;
+      line-height: 1.9;
     }
 
     ::selection {
-      background: #d99ab5;
-      color: #160d13;
+      background: #d58bab;
+      color: #180e14;
     }
 
 
@@ -65,47 +65,47 @@
 
       z-index: 1000;
 
-      background: rgba(13, 11, 18, 0.88);
-      backdrop-filter: blur(15px);
+      background: rgba(11, 9, 16, 0.92);
+      backdrop-filter: blur(16px);
 
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     .nav-container {
-      max-width: 1150px;
+      max-width: 1200px;
       margin: auto;
 
       padding: 15px 25px;
 
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
     }
 
     .logo {
-      color: #f1b4ca;
-      font-size: 1.5rem;
+      color: #efadc6;
+      font-size: 1.45rem;
       font-weight: bold;
-
       letter-spacing: 1px;
+      white-space: nowrap;
     }
 
     .nav-links {
       display: flex;
-      gap: 25px;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .nav-links a {
-      color: #ddd0d6;
+      color: #d8cbd1;
       text-decoration: none;
-
       font-size: 0.95rem;
-
       transition: 0.3s;
     }
 
     .nav-links a:hover {
-      color: #f1a9c5;
+      color: #f0a9c3;
     }
 
 
@@ -117,12 +117,12 @@
       min-height: 100vh;
 
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
 
       text-align: center;
 
-      padding: 130px 25px 80px;
+      padding: 150px 25px 90px;
 
       position: relative;
       overflow: hidden;
@@ -130,47 +130,45 @@
       background:
         radial-gradient(
           circle at 20% 20%,
-          rgba(148, 65, 104, 0.25),
+          rgba(150, 62, 105, 0.28),
           transparent 35%
         ),
 
         radial-gradient(
           circle at 80% 80%,
-          rgba(80, 63, 130, 0.25),
+          rgba(75, 60, 135, 0.22),
           transparent 35%
         ),
 
-        #0d0b12;
+        #0b0910;
     }
 
     .hero::before {
       content: "✦";
 
       position: absolute;
-
       top: 20%;
-      left: 15%;
+      left: 12%;
 
-      color: rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.13);
 
-      font-size: 50px;
+      font-size: 55px;
 
-      animation: float 5s infinite ease-in-out;
+      animation: float 5s ease-in-out infinite;
     }
 
     .hero::after {
       content: "✧";
 
       position: absolute;
+      bottom: 18%;
+      right: 12%;
 
-      bottom: 20%;
-      right: 15%;
+      color: rgba(255,255,255,0.13);
 
-      color: rgba(255,255,255,0.12);
+      font-size: 65px;
 
-      font-size: 60px;
-
-      animation: float 6s infinite ease-in-out reverse;
+      animation: float 6s ease-in-out infinite reverse;
     }
 
     @keyframes float {
@@ -180,20 +178,19 @@
       }
 
       50% {
-        transform: translateY(-20px);
+        transform: translateY(-18px);
       }
+
     }
 
     .hero-content {
-      max-width: 850px;
+      max-width: 900px;
       position: relative;
       z-index: 2;
     }
 
-    .eyebrow {
-      color: #e39db9;
-
-      text-transform: uppercase;
+    .hero-small {
+      color: #db86a7;
 
       letter-spacing: 5px;
 
@@ -203,16 +200,16 @@
     }
 
     .hero h1 {
-      font-size: clamp(3.5rem, 9vw, 7rem);
+      font-size: clamp(3.5rem, 10vw, 7rem);
 
-      line-height: 1.05;
+      line-height: 1;
 
       background:
         linear-gradient(
           120deg,
           #ffffff,
-          #f0b3ca,
-          #c892e0
+          #f0b0c8,
+          #bb9be0
         );
 
       -webkit-background-clip: text;
@@ -222,11 +219,11 @@
     }
 
     .hero-subtitle {
-      color: #c9bbc2;
+      color: #c8bbc2;
 
       font-size: 1.2rem;
 
-      max-width: 650px;
+      max-width: 700px;
 
       margin: auto;
 
@@ -245,51 +242,43 @@
       flex-wrap: wrap;
     }
 
-    .button {
-      display: inline-block;
+    .hero-button {
+      text-decoration: none;
 
-      padding: 12px 27px;
+      padding: 12px 28px;
 
       border-radius: 30px;
 
-      text-decoration: none;
-
       transition: 0.3s;
-
-      font-family: inherit;
     }
 
-    .primary-button {
-      background: #b65f82;
-
+    .primary {
+      background: #b85f83;
       color: white;
     }
 
-    .primary-button:hover {
-      background: #d2789c;
-
+    .primary:hover {
+      background: #d4779b;
       transform: translateY(-3px);
     }
 
-    .secondary-button {
-      border: 1px solid #6f5361;
-
-      color: #e4d6dc;
+    .secondary {
+      border: 1px solid #765565;
+      color: #e2d5db;
     }
 
-    .secondary-button:hover {
-      border-color: #d2789c;
-
-      color: #f1a9c5;
+    .secondary:hover {
+      border-color: #d4779b;
+      color: #efa9c2;
     }
 
 
     /* =========================
-       GENERAL SECTION
+       SECTIONS
     ========================== */
 
     section {
-      padding: 90px 25px;
+      padding: 95px 25px;
     }
 
     .container {
@@ -299,30 +288,29 @@
 
     .section-heading {
       text-align: center;
-
       margin-bottom: 45px;
     }
 
     .section-heading span {
-      color: #d783a5;
+      color: #d67d9e;
 
-      font-size: 0.8rem;
+      font-size: 0.75rem;
 
       letter-spacing: 4px;
     }
 
     .section-heading h2 {
-      font-size: 2.7rem;
+      color: #f5e5eb;
 
-      color: #f6e7ed;
+      font-size: 2.7rem;
 
       margin-top: 8px;
     }
 
     .section-heading p {
-      color: #998b93;
+      color: #94868e;
 
-      margin-top: 8px;
+      margin-top: 7px;
     }
 
 
@@ -330,41 +318,39 @@
        SEARCH
     ========================== */
 
-    .search-wrapper {
-      max-width: 650px;
+    .search-box {
+      max-width: 680px;
 
-      margin: 0 auto 45px;
-
-      position: relative;
+      margin: 0 auto 35px;
     }
 
-    .search-wrapper input {
+    .search-box input {
       width: 100%;
 
       padding: 17px 25px;
 
       border-radius: 40px;
 
-      border: 1px solid #493640;
+      border: 1px solid #47353f;
 
       background: #17131c;
 
       color: white;
 
+      outline: none;
+
       font-family: inherit;
 
       font-size: 1rem;
 
-      outline: none;
-
       transition: 0.3s;
     }
 
-    .search-wrapper input:focus {
-      border-color: #c97899;
+    .search-box input:focus {
+      border-color: #c87598;
 
       box-shadow:
-        0 0 20px rgba(201,120,153,0.15);
+        0 0 25px rgba(200,117,152,0.15);
     }
 
 
@@ -385,30 +371,30 @@
     }
 
     .category-btn {
-      background: #17131c;
+      border: 1px solid #44343d;
 
-      border: 1px solid #3e3039;
+      background: #16121a;
 
-      color: #cdbdc5;
+      color: #cdbec5;
 
       padding: 8px 18px;
 
-      border-radius: 25px;
-
-      cursor: pointer;
+      border-radius: 30px;
 
       font-family: inherit;
+
+      cursor: pointer;
 
       transition: 0.3s;
     }
 
     .category-btn:hover,
     .category-btn.active {
-      background: #b65f82;
-
-      border-color: #b65f82;
+      background: #b85f83;
 
       color: white;
+
+      border-color: #b85f83;
     }
 
 
@@ -420,7 +406,7 @@
       display: grid;
 
       grid-template-columns:
-        repeat(3, 1fr);
+        repeat(2, 1fr);
 
       gap: 25px;
     }
@@ -429,15 +415,15 @@
       background:
         linear-gradient(
           145deg,
-          #19151d,
-          #110e14
+          #19151e,
+          #100d14
         );
 
       border: 1px solid #30252d;
 
-      border-radius: 18px;
+      border-radius: 20px;
 
-      padding: 30px;
+      padding: 32px;
 
       position: relative;
 
@@ -451,8 +437,8 @@
 
       position: absolute;
 
-      top: 0;
       left: 0;
+      top: 0;
 
       width: 100%;
       height: 3px;
@@ -460,28 +446,28 @@
       background:
         linear-gradient(
           90deg,
-          #b65f82,
-          #8b6cc4
+          #bd6588,
+          #876bc0
         );
     }
 
     .card:hover {
-      transform: translateY(-8px);
+      transform: translateY(-7px);
 
       border-color: #654352;
 
       box-shadow:
-        0 20px 50px rgba(0,0,0,0.35);
+        0 20px 50px rgba(0,0,0,0.4);
     }
 
-    .card-category {
-      color: #d47e9f;
+    .category {
+      color: #d982a3;
 
-      font-size: 0.72rem;
+      text-transform: uppercase;
 
       letter-spacing: 2px;
 
-      text-transform: uppercase;
+      font-size: 0.7rem;
 
       margin-bottom: 10px;
     }
@@ -489,96 +475,94 @@
     .card h3 {
       color: #f5dfe8;
 
-      font-size: 1.6rem;
+      font-size: 1.65rem;
 
       margin-bottom: 15px;
     }
 
     .preview {
-      color: #b6a7ae;
+      color: #b9aab2;
 
       font-style: italic;
 
-      min-height: 75px;
+      white-space: pre-line;
     }
 
     .full-text {
       display: none;
 
-      white-space: pre-line;
-
-      color: #d6c8ce;
-
-      margin-top: 20px;
+      margin-top: 22px;
 
       padding-top: 20px;
 
       border-top: 1px solid #30252d;
+
+      color: #d6c9cf;
+
+      white-space: pre-line;
     }
 
     .read-btn {
-      margin-top: 20px;
+      margin-top: 22px;
+
+      padding: 9px 19px;
+
+      border-radius: 25px;
 
       background: transparent;
 
       color: #e39bb7;
 
-      border: 1px solid #74485c;
-
-      border-radius: 25px;
-
-      padding: 8px 18px;
-
-      cursor: pointer;
+      border: 1px solid #754a5e;
 
       font-family: inherit;
+
+      cursor: pointer;
 
       transition: 0.3s;
     }
 
     .read-btn:hover {
-      background: #b65f82;
+      background: #b85f83;
 
       color: white;
 
-      border-color: #b65f82;
+      border-color: #b85f83;
     }
 
 
     /* =========================
-       QUOTE SECTION
+       FEATURED QUOTE
     ========================== */
 
     .quote-section {
       background:
         linear-gradient(
           135deg,
-          #241522,
-          #171321
+          #261623,
+          #17131f
         );
 
       text-align: center;
     }
 
-    .quote {
+    .featured-quote {
       max-width: 850px;
 
       margin: auto;
 
       font-size:
-        clamp(1.6rem, 4vw, 2.6rem);
+        clamp(1.6rem, 4vw, 2.5rem);
 
       color: #f2dce5;
 
       font-style: italic;
-
-      line-height: 1.6;
     }
 
     .quote-author {
       margin-top: 20px;
 
-      color: #c77899;
+      color: #d37c9e;
     }
 
 
@@ -591,23 +575,38 @@
     }
 
     .about-box {
-      max-width: 750px;
+      max-width: 800px;
 
       margin: auto;
+
+      padding: 40px;
 
       background: #151119;
 
       border: 1px solid #30252d;
 
-      padding: 40px;
-
       border-radius: 20px;
     }
 
     .about-box p {
-      color: #b9aab1;
+      color: #bcaeb5;
 
       font-size: 1.08rem;
+    }
+
+
+    /* =========================
+       NO RESULTS
+    ========================== */
+
+    #noResults {
+      display: none;
+
+      text-align: center;
+
+      color: #9b8d94;
+
+      padding: 35px;
     }
 
 
@@ -622,7 +621,7 @@
 
       text-align: center;
 
-      padding: 40px 20px;
+      padding: 45px 20px;
 
       color: #81747c;
     }
@@ -633,28 +632,13 @@
 
 
     /* =========================
-       NO RESULTS
+       MOBILE
     ========================== */
 
-    #noResults {
-      display: none;
-
-      text-align: center;
-
-      color: #95878e;
-
-      padding: 30px;
-    }
-
-
-    /* =========================
-       RESPONSIVE
-    ========================== */
-
-    @media (max-width: 850px) {
+    @media (max-width: 800px) {
 
       .cards {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
       }
 
     }
@@ -668,23 +652,27 @@
       }
 
       .nav-links {
-        gap: 15px;
+        gap: 12px;
       }
 
       .nav-links a {
-        font-size: 0.82rem;
+        font-size: 0.8rem;
       }
 
       .hero {
         padding-top: 160px;
       }
 
-      .cards {
-        grid-template-columns: 1fr;
+      .hero h1 {
+        font-size: 4rem;
       }
 
       .section-heading h2 {
         font-size: 2.2rem;
+      }
+
+      .card {
+        padding: 25px;
       }
 
       .about-box {
@@ -739,7 +727,7 @@
 
     <div class="hero-content">
 
-      <div class="eyebrow">
+      <div class="hero-small">
         शब्दों में छिपे एहसास
       </div>
 
@@ -748,24 +736,24 @@
       </h1>
 
       <p class="hero-subtitle">
-        "कुछ एहसास शब्दों में नहीं कहे जाते,
-        उन्हें बस महसूस किया जाता है।"
+        "शब्द वही खूबसूरत होते हैं,
+        जो दिल से निकलकर दिल तक पहुँचते हैं।"
       </p>
 
       <div class="hero-buttons">
 
         <a
           href="#shayari"
-          class="button primary-button"
+          class="hero-button primary"
         >
           शायरियाँ पढ़ें
         </a>
 
         <a
           href="#poems"
-          class="button secondary-button"
+          class="hero-button secondary"
         >
-          कविताएँ देखें
+          कविताएँ पढ़ें
         </a>
 
       </div>
@@ -776,7 +764,7 @@
 
 
   <!-- =========================
-       SHAYARI
+       MAIN COLLECTION
   ========================== -->
 
   <section id="shayari">
@@ -785,12 +773,12 @@
 
       <div class="section-heading">
 
-        <span>SHAYARI</span>
+        <span>VAIBHAV YADAV</span>
 
-        <h2>शायरियाँ</h2>
+        <h2>रचनाओं का संग्रह</h2>
 
         <p>
-          कुछ शब्द, कुछ एहसास और बहुत सारी बातें।
+          विचार • शायरी • कविता • सत्य • जीवन
         </p>
 
       </div>
@@ -798,19 +786,19 @@
 
       <!-- SEARCH -->
 
-      <div class="search-wrapper">
+      <div class="search-box">
 
         <input
           type="text"
           id="searchInput"
-          placeholder="🔍 शायरी, कविता या Quote खोजें..."
+          placeholder="🔍 अपनी पसंद की शायरी या कविता खोजें..."
           onkeyup="searchContent()"
         >
 
       </div>
 
 
-      <!-- CATEGORY BUTTONS -->
+      <!-- FILTERS -->
 
       <div class="categories">
 
@@ -818,7 +806,7 @@
           class="category-btn active"
           onclick="filterContent('all', this)"
         >
-          सभी
+          सभी रचनाएँ
         </button>
 
         <button
@@ -842,39 +830,154 @@
           Quotes
         </button>
 
+        <button
+          class="category-btn"
+          onclick="filterContent('thought', this)"
+        >
+          विचार
+        </button>
+
       </div>
 
 
       <div class="cards" id="contentCards">
 
 
-        <!-- =====================
-             SHAYARI 1
-        ====================== -->
+        <!-- ==================================================
+             1. बिना समझ के किया गया दान
+        =================================================== -->
+
+        <article
+          class="card"
+          data-category="poem"
+        >
+
+          <div class="category">
+            कविता
+          </div>
+
+          <h3>
+            बिना समझ के किया गया दान
+          </h3>
+
+          <p class="preview">
+
+करता है हर वो व्यक्ति दान,
+जिसके भीतर नहीं है ज्ञान,
+तुम कर देते हो लाखों रूपों का दान
+पर नहीं कर सकते किसी जीव का सम्मान।
+
+          </p>
+
+          <div class="full-text">
+
+करता है हर वो व्यक्ति दान,
+जिसके भीतर नहीं है ज्ञान,
+
+तुम कर देते हो लाखों रूपों का दान
+पर नहीं कर सकते किसी जीव का सम्मान।
+
+यह सोचकर कर देते हो दान,
+कि सिद्ध होंगे तुम्हारे अरमान,
+
+पर क्यों रह जाते हो उससे अनजान,
+जो आयेगा इससे परिणाम।
+
+पूछना कभी खुद से की क्यों करते हो दान,
+
+और फिर कहा जाता है तुम्हारा ये धन धान।
+
+जवाब मिलेंगे की -
+नहीं जानते क्यों करते है हम दान,
+
+और जिसको देकर आये हम,
+वो कर रहा धूम्रपान।
+
+दान नहीं है नाम दिखाना,
+
+दान नहीं है यश कमाना।
+
+दान वही जो दर्द मिटाए,
+
+किसी बुझते दीप को फिर जलाए।
+
+दान अगर अंधा होगा,
+तो पाप को भी पाल देगा,
+
+ज्ञान अगर जागा होगा,
+तो समाज संभाल देगा।
+
+दान से पहले सोचो,
+किसके हाथ में जा रहा है
+
+क्योंकि दिया हुआ एक रुपया भी,
+किसी का कल बना रहा है
+
+दान वो दीया है जो अंधेरों को हराता है,
+
+हाथ नहीं, दिल से जो दिया जाए वही सच्चा कहलाता है
+
+ज्ञान के साथ किया दान,
+समाज का मुकद्दर बदलता है,
+
+वरना दान के नाम पर दिखावा,
+सिर्फ जेबें ही बदलता है।
+
+~ वैभव यादव
+
+          </div>
+
+          <button
+            class="read-btn"
+            onclick="toggleText(this)"
+          >
+            पूरी कविता पढ़ें
+          </button>
+
+        </article>
+
+
+        <!-- ==================================================
+             2. इश्क
+        =================================================== -->
 
         <article
           class="card"
           data-category="shayari"
         >
 
-          <div class="card-category">
+          <div class="category">
             शायरी
           </div>
 
           <h3>
-            इंसान
+            इश्क
           </h3>
 
           <p class="preview">
-            "कहाँ लिखा था उसने कि मुझे तू एक जीव कुर्बान कर..."
+
+इश्क वह चीज नहीं जो राहों में मिल जाया करें,
+इश्क कोई सौदा नहीं जो बाजारों में हो जाया करें।
+
           </p>
 
           <div class="full-text">
 
-कहाँ लिखा था उसने कि मुझे तू एक जीव कुर्बान कर,
+इश्क वह चीज नहीं जो राहों में मिल जाया करें,
+इश्क कोई सौदा नहीं जो बाजारों में हो जाया करें।
 
-ऐ इंसान, अपने स्वाद की ख़ातिर
-कर डाला उसे बदनाम।
+इश्क में चीज नहीं जो हो जाती है हंसते-हंसते,
+यह तो वह सत्य है जिसे तुम ना समझ पाओगे मरते मरते।
+
+जिसे तुम इश्क समझते हो वह तो मोह का जाल है,
+जहां मैं और मेरा बरकरार है वहां इश्क नहीं केवल दकियानूसी ख्याल है।
+
+इश्क किसी चेहरे का नहीं, बस चेतन के उजियारे का नाम है।
+
+जो तुम्हें तुमसे मुक्त कर दे,
+यही तो इश्क का नाम है।
+
+~ वैभव यादव
 
           </div>
 
@@ -888,41 +991,65 @@
         </article>
 
 
-        <!-- =====================
-             POEM 1
-        ====================== -->
+        <!-- ==================================================
+             3. सत्य की असली पहचान
+        =================================================== -->
 
         <article
           class="card"
           data-category="poem"
         >
 
-          <div class="card-category">
+          <div class="category">
             कविता
           </div>
 
           <h3>
-            शुरुआत
+            सत्य की असली पहचान
           </h3>
 
           <p class="preview">
-            "हर अंत के बाद कहीं न कहीं
-            एक नई शुरुआत होती है..."
+
+सत्यता कभी भीड़ से घबराती नहीं,
+अकेले खड़े होने में ज़रा भी हिचकिचाती नहीं।
+
           </p>
 
           <div class="full-text">
 
-हर अंत के बाद
-कहीं न कहीं
-एक नई शुरुआत होती है।
+सत्यता कभी भीड़ से घबराती नहीं,
+अकेले खड़े होने में ज़रा भी हिचकिचाती नहीं।
 
-बस ज़रूरत है
-थोड़ा ठहरने की,
+सत्य है तो सवालों से घबराएगा नहीं,
+कोई भी जवाब बिना तथ्यों के आएगा नहीं।
 
-थोड़ा खुद को समझने की,
+किसी ने कहा, तुमने मान लिया,
+सत्य का न तुमने कभी सम्मान किया।
 
-और फिर
-एक कदम आगे बढ़ाने की।
+सवाल किया, तो तुमने उसे चमत्कार का नाम दिया,
+अज्ञान के कारण अंधविश्वास ही फैलाया,
+सत्य मौजूद होते हुए भी तुमने उसे धुँधला ही पाया।
+
+आकाश चीज कभी ढूंढी नहीं जाती
+बादलों से यह छुप नहीं जाती
+
+सत्य की नेती नेती कर कोशिश की तुमने इसे छुपाने की
+
+यह तो वह अपार सागर है जिसकी jurrat ना करता सूरज भी सुखाने की
+
+कितना भी अँधकार हो,
+प्रकाश को छिपा नहीं सकता।
+
+कहते हैं न—
+चंद्रमा भी अपनी रोशनी बिन सूरज दिखा नहीं सकता
+
+न जाने कैसे जी लेते हो तुम
+सत्य के बिना अपना यह जीवन,
+
+ज़रा भी नहीं घबराता क्या
+तुम्हारा यह चेतन मन?
+
+~ वैभव यादव
 
           </div>
 
@@ -936,32 +1063,49 @@
         </article>
 
 
-        <!-- =====================
-             QUOTE 1
-        ====================== -->
+        <!-- ==================================================
+             4. अंधविश्वास
+        =================================================== -->
 
         <article
           class="card"
-          data-category="quote"
+          data-category="thought"
         >
 
-          <div class="card-category">
-            Quote
+          <div class="category">
+            विचार
           </div>
 
           <h3>
-            एक बात
+            अंधविश्वास
           </h3>
 
           <p class="preview">
-            "जो दिल से लिखा जाता है,
-            वह दिल तक ज़रूर पहुँचता है।"
+
+बाबाओं ने अंधविश्वास ही है बस फैलाया,
+झूठ छिपाने के लिए सवाल पूछने से डराया।
+
           </p>
 
           <div class="full-text">
 
-"जो दिल से लिखा जाता है,
-वह दिल तक ज़रूर पहुँचता है।"
+बाबाओं ने अंधविश्वास ही है बस फैलाया,
+
+झूठ छिपाने के लिए सवाल पूछने से डराया।
+
+धर्म के नाम पर लोगों ने नदियों में दूध बहाया,
+
+बाबाओं ने भी उनका खूब मनोबल बढ़ाया।।
+
+गणेश चतुर्थी पर मूर्तियों का भी विसर्जन करवाया,
+
+पुण्य के नाम पर नदियों भी दूषित कर आया।।
+
+निवेदन है आप सभी से अंधविश्वास को छोड़िए,
+अंधकार को हटाइए और सत्य की ओर एक कदम उठाइए
+और सवाल पूछने से मत घबराइए।
+
+~ वैभव यादव
 
           </div>
 
@@ -969,7 +1113,172 @@
             class="read-btn"
             onclick="toggleText(this)"
           >
-            Quote पढ़ें
+            पूरी रचना पढ़ें
+          </button>
+
+        </article>
+
+
+        <!-- ==================================================
+             5. बच्चों का संघर्ष
+        =================================================== -->
+
+        <article
+          class="card"
+          data-category="poem"
+        >
+
+          <div class="category">
+            कविता
+          </div>
+
+          <h3>
+            संघर्ष
+          </h3>
+
+          <p class="preview">
+
+बच्चों का न था कोई ऐसा विचार,
+उनको तो मंजूर कर रही थी सरकार।
+
+          </p>
+
+          <div class="full-text">
+
+बच्चों का न था कोई ऐसा विचार,
+उनको तो मंजूर कर रही थी सरकार।
+
+प्रशासन को संतोषित किया फूल देकर हर बार,
+पर उन्होंने तो फिर भी किया था प्रहार।।
+
+ऐसा क्या दिखा था हस्तिफ में अंधकार,
+जिसके लिए घबरा रही थी सरकार।।
+
+इतिहास गवाह है, सुनती है हर सरकार,
+बस सुनने वाला चाहिए बुलंद किरदार।
+
+सच के आगे टिकता नहीं कोई अत्याचार,
+आखिर जीतता है जनता का अधिकार।।
+
+अब प्रधान ने भी दे दिया इस्तीफा इस बार,
+गूंज उठी संघर्ष की हुंकार।
+
+यह अंत नहीं, बस बदलाव की है शुरुआत मेरे यार,
+लिख रहा है इतिहास, स्वयं को फिर से एक बार।
+
+          </div>
+
+          <button
+            class="read-btn"
+            onclick="toggleText(this)"
+          >
+            पूरी कविता पढ़ें
+          </button>
+
+        </article>
+
+
+        <!-- ==================================================
+             6. आपकी पहली शायरी
+        =================================================== -->
+
+        <article
+          class="card"
+          data-category="shayari"
+        >
+
+          <div class="category">
+            शायरी
+          </div>
+
+          <h3>
+            इंसान
+          </h3>
+
+          <p class="preview">
+
+कहाँ लिखा था उसने कि मुझे तू एक जीव कुर्बान कर,
+
+ऐ इंसान, अपने स्वाद की ख़ातिर
+कर डाला उसे बदनाम।
+
+          </p>
+
+          <div class="full-text">
+
+कहाँ लिखा था उसने कि मुझे तू एक जीव कुर्बान कर,
+
+ऐ इंसान, अपने स्वाद की ख़ातिर
+कर डाला उसे बदनाम।
+
+~ वैभव यादव
+
+          </div>
+
+          <button
+            class="read-btn"
+            onclick="toggleText(this)"
+          >
+            पूरी शायरी पढ़ें
+          </button>
+
+        </article>
+
+
+        <!-- ==================================================
+             7. IMAGE 2 से अतिरिक्त रचना
+        =================================================== -->
+
+        <article
+          class="card"
+          data-category="poem"
+        >
+
+          <div class="category">
+            कविता
+          </div>
+
+          <h3>
+            सत्य और संघर्ष
+          </h3>
+
+          <p class="preview">
+
+इतिहास गवाह है, सुनती है हर सरकार,
+बस सुनने वाला चाहिए बुलंद किरदार।
+
+          </p>
+
+          <div class="full-text">
+
+बच्चों का न था कोई ऐसा विचार,
+उनको तो मंजूर कर रही थी सरकार।
+
+प्रशासन को संतोषित किया फूल देकर हर बार,
+पर उन्होंने तो फिर भी किया था प्रहार।।
+
+ऐसा क्या दिखा था हस्तिफ में अंधकार,
+जिसके लिए घबरा रही थी सरकार।।
+
+इतिहास गवाह है, सुनती है हर सरकार,
+बस सुनने वाला चाहिए बुलंद किरदार।
+
+सच के आगे टिकता नहीं कोई अत्याचार,
+आखिर जीतता है जनता का अधिकार।।
+
+अब प्रधान ने भी दे दिया इस्तीफा इस बार,
+गूंज उठी संघर्ष की हुंकार।
+
+यह अंत नहीं, बस बदलाव की है शुरुआत मेरे यार,
+लिख रहा है इतिहास, स्वयं को फिर से एक बार।
+
+          </div>
+
+          <button
+            class="read-btn"
+            onclick="toggleText(this)"
+          >
+            पूरी रचना पढ़ें
           </button>
 
         </article>
@@ -979,7 +1288,7 @@
 
 
       <div id="noResults">
-        कोई शायरी या कविता नहीं मिली।
+        आपकी खोज से कोई रचना नहीं मिली।
       </div>
 
     </div>
@@ -988,7 +1297,7 @@
 
 
   <!-- =========================
-       FEATURED QUOTE
+       QUOTES
   ========================== -->
 
   <section
@@ -1002,20 +1311,23 @@
 
         <span>QUOTES</span>
 
-        <h2>आज का ख़याल</h2>
+        <h2>विचार</h2>
+
+        <p>
+          कुछ शब्द जो सोचने पर मजबूर करें।
+        </p>
 
       </div>
 
-      <div class="quote">
+      <div class="featured-quote">
 
-        “कुछ बातें कहने के लिए
-        आवाज़ की नहीं,
-        सिर्फ़ एहसास की ज़रूरत होती है।”
+        “सवाल पूछने से मत घबराइए,
+        क्योंकि सत्य सवालों से डरता नहीं है।”
 
       </div>
 
       <div class="quote-author">
-        — Vaibhav Poetry
+        — वैभव यादव
       </div>
 
     </div>
@@ -1024,7 +1336,7 @@
 
 
   <!-- =========================
-       POEMS
+       POEMS SECTION
   ========================== -->
 
   <section id="poems">
@@ -1035,10 +1347,10 @@
 
         <span>POETRY</span>
 
-        <h2>कविताओं की दुनिया</h2>
+        <h2>कविताएँ</h2>
 
         <p>
-          जहाँ शब्द भावनाओं का रूप ले लेते हैं।
+          विचारों और भावनाओं को शब्द देने का एक प्रयास।
         </p>
 
       </div>
@@ -1052,30 +1364,37 @@
           data-category="poem"
         >
 
-          <div class="card-category">
+          <div class="category">
             कविता
           </div>
 
           <h3>
-            खामोशी
+            बिना समझ के किया गया दान
           </h3>
 
           <p class="preview">
-            "कभी-कभी खामोशी भी
-            बहुत कुछ कह जाती है..."
+
+दान वही जो दर्द मिटाए,
+
+किसी बुझते दीप को फिर जलाए।
+
           </p>
 
           <div class="full-text">
 
-कभी-कभी खामोशी भी
-बहुत कुछ कह जाती है,
+दान अगर अंधा होगा,
+तो पाप को भी पाल देगा,
 
-जो बातें होंठ नहीं कह पाते
-वो आँखें कह जाती हैं।
+ज्ञान अगर जागा होगा,
+तो समाज संभाल देगा।
 
-और कुछ रिश्ते
-बिना किसी वादे के भी
-दिल में रह जाते हैं।
+दान से पहले सोचो,
+किसके हाथ में जा रहा है
+
+क्योंकि दिया हुआ एक रुपया भी,
+किसी का कल बना रहा है।
+
+~ वैभव यादव
 
           </div>
 
@@ -1083,7 +1402,7 @@
             class="read-btn"
             onclick="toggleText(this)"
           >
-            पूरी कविता पढ़ें
+            पढ़ें
           </button>
 
         </article>
@@ -1094,30 +1413,30 @@
           data-category="poem"
         >
 
-          <div class="card-category">
+          <div class="category">
             कविता
           </div>
 
           <h3>
-            सफ़र
+            सत्य की असली पहचान
           </h3>
 
           <p class="preview">
-            "मंज़िल से ज्यादा खूबसूरत
-            कभी-कभी सफ़र होता है..."
+
+सत्यता कभी भीड़ से घबराती नहीं,
+अकेले खड़े होने में ज़रा भी हिचकिचाती नहीं।
+
           </p>
 
           <div class="full-text">
 
-मंज़िल से ज्यादा खूबसूरत
-कभी-कभी सफ़र होता है,
+सत्य है तो सवालों से घबराएगा नहीं,
+कोई भी जवाब बिना तथ्यों के आएगा नहीं।
 
-कुछ लोग मिलते हैं,
-कुछ पीछे छूट जाते हैं,
+किसी ने कहा, तुमने मान लिया,
+सत्य का न तुमने कभी सम्मान किया।
 
-और इन्हीं मुलाकातों से
-ज़िंदगी का मतलब
-समझ आता है।
+~ वैभव यादव
 
           </div>
 
@@ -1125,7 +1444,7 @@
             class="read-btn"
             onclick="toggleText(this)"
           >
-            पूरी कविता पढ़ें
+            पढ़ें
           </button>
 
         </article>
@@ -1136,31 +1455,28 @@
           data-category="poem"
         >
 
-          <div class="card-category">
+          <div class="category">
             कविता
           </div>
 
           <h3>
-            उम्मीद
+            अंधविश्वास
           </h3>
 
           <p class="preview">
-            "अंधेरा चाहे कितना भी हो,
-            सुबह जरूर आती है..."
+
+अंधविश्वास को छोड़िए,
+अंधकार को हटाइए।
+
           </p>
 
           <div class="full-text">
 
-अंधेरा चाहे कितना भी हो,
+निवेदन है आप सभी से अंधविश्वास को छोड़िए,
+अंधकार को हटाइए और सत्य की ओर एक कदम उठाइए
+और सवाल पूछने से मत घबराइए।
 
-सुबह जरूर आती है।
-
-टूटी हुई उम्मीदों में भी
-कहीं न कहीं
-एक नई रोशनी छुपी होती है।
-
-बस इंतज़ार करो,
-वक़्त बदलता जरूर है।
+~ वैभव यादव
 
           </div>
 
@@ -1168,10 +1484,11 @@
             class="read-btn"
             onclick="toggleText(this)"
           >
-            पूरी कविता पढ़ें
+            पढ़ें
           </button>
 
         </article>
+
 
       </div>
 
@@ -1193,9 +1510,9 @@
 
       <div class="section-heading">
 
-        <span>ABOUT</span>
+        <span>ABOUT THE AUTHOR</span>
 
-        <h2>Vaibhav Poetry के बारे में</h2>
+        <h2>वैभव यादव</h2>
 
       </div>
 
@@ -1203,20 +1520,27 @@
 
         <p>
 
-          स्वागत है <strong>Vaibhav Poetry</strong> में —
-          एक ऐसी जगह जहाँ शब्द सिर्फ़ पढ़े नहीं,
-          महसूस किए जाते हैं।
+          <strong>Vaibhav Poetry</strong>
+          वैभव यादव की रचनाओं का एक डिजिटल संग्रह है।
 
           <br><br>
 
-          यहाँ आपको शायरियाँ, कविताएँ और Quotes मिलेंगे
-          जो प्यार, ज़िंदगी, रिश्तों, खामोशी,
-          उम्मीद और इंसानी एहसासों को शब्द देते हैं।
+          यहाँ शब्दों के माध्यम से सत्य,
+          समाज, अंधविश्वास, प्रेम, इश्क,
+          दान, संघर्ष और जीवन से जुड़े विचार
+          प्रस्तुत किए जाते हैं।
+
+          <br><br>
+
+          इस वेबसाइट का उद्देश्य केवल कविता लिखना नहीं,
+          बल्कि पाठकों को सोचने, सवाल करने और
+          अपने आसपास की दुनिया को एक नए दृष्टिकोण से
+          देखने के लिए प्रेरित करना है।
 
           <br><br>
 
           <strong>
-            पढ़िए। महसूस कीजिए। और अपने एहसासों को शब्द दीजिए।
+            पढ़िए • सोचिए • सवाल कीजिए
           </strong>
 
         </p>
@@ -1235,11 +1559,16 @@
   <footer>
 
     <p>
-      © 2026 <strong>Vaibhav Poetry</strong>
+      © 2026
+      <strong>Vaibhav Poetry</strong>
     </p>
 
     <p>
-      शब्दों से दिल तक ❤️
+      वैभव यादव द्वारा लिखित रचनाएँ ❤️
+    </p>
+
+    <p style="margin-top:10px;">
+      शब्दों से विचारों तक।
     </p>
 
   </footer>
@@ -1261,25 +1590,17 @@
       const text =
         button.previousElementSibling;
 
-      if (
-        text.style.display === "block"
-      ) {
+      if (text.style.display === "block") {
 
         text.style.display = "none";
 
-        button.textContent =
-          button.textContent.includes("Quote")
-            ? "Quote पढ़ें"
-            : button.textContent.includes("कविता")
-              ? "पूरी कविता पढ़ें"
-              : "पूरी शायरी पढ़ें";
+        button.textContent = "पूरी रचना पढ़ें";
 
       } else {
 
         text.style.display = "block";
 
-        button.textContent =
-          "कम पढ़ें";
+        button.textContent = "कम पढ़ें";
 
       }
 
@@ -1304,14 +1625,13 @@
 
       let found = 0;
 
+
       cards.forEach(function(card) {
 
         const content =
           card.innerText.toLowerCase();
 
-        if (
-          content.includes(search)
-        ) {
+        if (content.includes(search)) {
 
           card.style.display = "";
 
@@ -1350,11 +1670,13 @@
           ".category-btn"
         );
 
+
       buttons.forEach(function(btn) {
 
         btn.classList.remove("active");
 
       });
+
 
       button.classList.add("active");
 
@@ -1392,8 +1714,6 @@
           ? "block"
           : "none";
 
-
-      /* Clear search */
 
       document.getElementById(
         "searchInput"
