@@ -6,29 +6,46 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Vaibhav Poetry | वैभव यादव</title>
+<title>Vaibhav Poetry | हिंदी कविताएँ, शायरी और विचार</title>
 
 <meta
 name="description"
-content="Vaibhav Poetry — वैभव यादव की कविताओं, शायरियों और विचारों का डिजिटल संग्रह।"
+content="Vaibhav Poetry पर वैभव यादव की मौलिक हिंदी कविताएँ, शायरियाँ और विचार पढ़ें। सत्य, प्रेम, इश्क, समाज, जीवन और मानवीय भावनाओं से जुड़ी रचनाओं का संग्रह।"
 />
 
 <meta
 name="keywords"
-content="Vaibhav Poetry, Vaibhav Yadav, वैभव यादव, हिंदी कविता, हिंदी शायरी, हिंदी कविताएँ"
+content="Vaibhav Poetry, Vaibhav Yadav, वैभव यादव, हिंदी कविता, हिंदी कविताएँ, हिंदी शायरी, प्रेम कविता, इश्क कविता, जीवन कविता, सत्य कविता"
+/>
+
+<meta name="author" content="Vaibhav Yadav">
+
+<meta name="robots" content="index, follow">
+
+<meta name="language" content="Hindi">
+
+<meta name="revisit-after" content="7 days">
+
+<meta property="og:type" content="website">
+
+<meta
+property="og:title"
+content="Vaibhav Poetry | हिंदी कविताएँ, शायरी और विचार"
 />
 
 <meta
-name="author"
-content="Vaibhav Yadav"
+property="og:description"
+content="वैभव यादव की मौलिक हिंदी कविताओं, शायरियों और विचारों का संग्रह।"
 />
+
+<meta property="og:site_name" content="Vaibhav Poetry">
 
 
 <style>
 
-/* =========================
+/* =====================================================
    RESET
-========================= */
+===================================================== */
 
 *{
     margin:0;
@@ -65,9 +82,9 @@ body{
 }
 
 
-/* =========================
-   NAVBAR
-========================= */
+/* =====================================================
+   NAVIGATION
+===================================================== */
 
 nav{
 
@@ -86,7 +103,7 @@ nav{
     backdrop-filter:blur(16px);
 
     border-bottom:
-    1px solid rgba(255,255,255,0.08);
+    1px solid rgba(255,255,255,.08);
 
 }
 
@@ -116,9 +133,9 @@ nav{
 
     letter-spacing:1px;
 
-    white-space:nowrap;
-
     cursor:pointer;
+
+    white-space:nowrap;
 
 }
 
@@ -136,13 +153,11 @@ nav{
 
 .nav-links button{
 
-    color:#d8cbd1;
-
     background:none;
 
     border:none;
 
-    text-decoration:none;
+    color:#d8cbd1;
 
     font-family:inherit;
 
@@ -161,9 +176,9 @@ nav{
 }
 
 
-/* =========================
-   PAGE SYSTEM
-========================= */
+/* =====================================================
+   HOME
+===================================================== */
 
 .page{
 
@@ -171,11 +186,10 @@ nav{
 
     min-height:100vh;
 
-    padding:
-    130px 25px 80px;
+    padding:130px 25px 90px;
 
     animation:
-    pageOpen .35s ease;
+    pageOpen .4s ease;
 
 }
 
@@ -206,9 +220,9 @@ nav{
 }
 
 
-/* =========================
-   HOME
-========================= */
+/* =====================================================
+   HERO
+===================================================== */
 
 #home{
 
@@ -222,8 +236,7 @@ nav{
 
     text-align:center;
 
-    padding:
-    150px 25px 90px;
+    padding:150px 25px 90px;
 
     position:relative;
 
@@ -296,17 +309,11 @@ nav{
 @keyframes float{
 
     0%,100%{
-
-        transform:
-        translateY(0);
-
+        transform:translateY(0);
     }
 
     50%{
-
-        transform:
-        translateY(-18px);
-
+        transform:translateY(-18px);
     }
 
 }
@@ -386,8 +393,6 @@ nav{
 
 .hero-button{
 
-    border:none;
-
     padding:12px 28px;
 
     border-radius:30px;
@@ -396,9 +401,9 @@ nav{
 
     font-family:inherit;
 
-    cursor:pointer;
-
     font-size:1rem;
+
+    cursor:pointer;
 
 }
 
@@ -407,6 +412,8 @@ nav{
     background:#b85f83;
 
     color:white;
+
+    border:1px solid #b85f83;
 
 }
 
@@ -437,18 +444,18 @@ nav{
 }
 
 
-/* =========================
-   INTRO LOGO SCREEN
-========================= */
+/* =====================================================
+   LOADING LOGO
+===================================================== */
 
 #introScreen{
 
     position:fixed;
 
-    top:0;
-    left:0;
+    inset:0;
 
     width:100%;
+
     height:100%;
 
     background:#0b0910;
@@ -493,9 +500,9 @@ nav{
     font-size:
     clamp(3rem,8vw,6rem);
 
-    line-height:1;
-
     font-weight:bold;
+
+    line-height:1;
 
     background:
     linear-gradient(
@@ -544,9 +551,9 @@ nav{
 }
 
 
-/* =========================
+/* =====================================================
    CONTAINER
-========================= */
+===================================================== */
 
 .container{
 
@@ -593,16 +600,15 @@ nav{
 }
 
 
-/* =========================
+/* =====================================================
    SEARCH
-========================= */
+===================================================== */
 
 .search-box{
 
     max-width:680px;
 
-    margin:
-    0 auto 35px;
+    margin:0 auto 35px;
 
 }
 
@@ -610,13 +616,11 @@ nav{
 
     width:100%;
 
-    padding:
-    17px 25px;
+    padding:17px 25px;
 
     border-radius:40px;
 
-    border:
-    1px solid #47353f;
+    border:1px solid #47353f;
 
     background:#17131c;
 
@@ -643,9 +647,9 @@ nav{
 }
 
 
-/* =========================
-   TITLE LIST
-========================= */
+/* =====================================================
+   CONTENT LIST
+===================================================== */
 
 .content-list{
 
@@ -656,9 +660,9 @@ nav{
 }
 
 
-/* =========================
-   CONTENT TITLE BUTTON
-========================= */
+/* =====================================================
+   TITLE BUTTON
+===================================================== */
 
 .content-button{
 
@@ -666,21 +670,19 @@ nav{
 
     display:block;
 
-    text-align:left;
-
     position:relative;
 
     overflow:hidden;
 
+    text-align:left;
+
     margin-bottom:18px;
 
-    padding:
-    24px 28px;
+    padding:24px 28px;
 
     border-radius:20px;
 
-    border:
-    1px solid #30252d;
+    border:1px solid #30252d;
 
     background:
     linear-gradient(
@@ -726,8 +728,7 @@ nav{
 
 .content-button:hover{
 
-    transform:
-    translateY(-5px);
+    transform:translateY(-5px);
 
     border-color:#654352;
 
@@ -752,9 +753,9 @@ nav{
 }
 
 
-/* =========================
-   FULL CONTENT
-========================= */
+/* =====================================================
+   FULL POEM
+===================================================== */
 
 .content-view{
 
@@ -779,13 +780,11 @@ nav{
 
     background:transparent;
 
-    border:
-    1px solid #654352;
+    border:1px solid #654352;
 
     color:#dfa1b9;
 
-    padding:
-    9px 18px;
+    padding:9px 18px;
 
     border-radius:25px;
 
@@ -818,8 +817,7 @@ nav{
         #100d14
     );
 
-    border:
-    1px solid #30252d;
+    border:1px solid #30252d;
 
     border-radius:20px;
 
@@ -889,9 +887,9 @@ nav{
 }
 
 
-/* =========================
-   NO RESULT
-========================= */
+/* =====================================================
+   NO RESULTS
+===================================================== */
 
 .no-results{
 
@@ -906,9 +904,9 @@ nav{
 }
 
 
-/* =========================
+/* =====================================================
    EMPTY SECTION
-========================= */
+===================================================== */
 
 .empty-box{
 
@@ -922,8 +920,7 @@ nav{
 
     background:#151119;
 
-    border:
-    1px solid #30252d;
+    border:1px solid #30252d;
 
     border-radius:20px;
 
@@ -932,16 +929,15 @@ nav{
 }
 
 
-/* =========================
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer{
 
     background:#08070b;
 
-    border-top:
-    1px solid #211a21;
+    border-top:1px solid #211a21;
 
     text-align:center;
 
@@ -958,9 +954,9 @@ footer strong{
 }
 
 
-/* =========================
+/* =====================================================
    MOBILE
-========================= */
+===================================================== */
 
 @media(max-width:800px){
 
@@ -987,19 +983,19 @@ footer strong{
     .page{
 
         padding:
-        150px 18px 60px;
-
-    }
-
-    .hero{
-
-        padding-top:160px;
+        150px 18px 70px;
 
     }
 
     .hero h1{
 
         font-size:4rem;
+
+    }
+
+    .hero-subtitle{
+
+        font-size:1rem;
 
     }
 
@@ -1039,9 +1035,9 @@ footer strong{
 <body>
 
 
-<!-- =========================
-     INTRO SCREEN
-========================= -->
+<!-- =====================================================
+     LOGO SCREEN
+===================================================== -->
 
 <div id="introScreen">
 
@@ -1064,262 +1060,256 @@ footer strong{
 </div>
 
 
-<!-- =========================
+<!-- =====================================================
      NAVIGATION
-========================= -->
+===================================================== -->
 
 <nav>
 
-    <div class="nav-container">
-
-        <div
-            class="logo"
-            onclick="openPage('home')"
-        >
-            ✦ Vaibhav Poetry
-        </div>
+<div class="nav-container">
 
 
-        <div class="nav-links">
+<div
+class="logo"
+onclick="openPage('home')"
+>
+✦ Vaibhav Poetry
+</div>
 
-            <button
-                onclick="openPage('home')"
-            >
-                होम
-            </button>
 
-            <button
-                onclick="openPage('poems')"
-            >
-                कविताएँ
-            </button>
+<div class="nav-links">
 
-            <button
-                onclick="openPage('shayari')"
-            >
-                शायरियाँ
-            </button>
+<button onclick="openPage('home')">
+होम
+</button>
 
-            <button
-                onclick="openPage('quotes')"
-            >
-                Quotes
-            </button>
+<button onclick="openPage('poems')">
+कविताएँ
+</button>
 
-        </div>
+<button onclick="openPage('shayari')">
+शायरियाँ
+</button>
 
-    </div>
+<button onclick="openPage('quotes')">
+Quotes
+</button>
+
+</div>
+
+</div>
 
 </nav>
 
 
-<!-- =========================
+<!-- =====================================================
      HOME
-========================= -->
+===================================================== -->
 
 <section
-    id="home"
-    class="page active"
+id="home"
+class="page active"
 >
 
-    <div class="hero-content">
-
-        <div class="hero-small">
-            शब्दों में छिपे एहसास
-        </div>
+<div class="hero-content">
 
 
-        <h1>
-            Vaibhav<br>
-            Poetry
-        </h1>
+<div class="hero-small">
+शब्दों में छिपे एहसास
+</div>
 
 
-        <p class="hero-subtitle">
-
-            "शब्द वही खूबसूरत होते हैं,
-            जो दिल से निकलकर दिल तक पहुँचते हैं।"
-
-            <br><br>
-
-            शब्दों, विचारों और भावनाओं को
-            एक नए दृष्टिकोण के साथ प्रस्तुत
-            करने का एक छोटा-सा प्रयास।
-
-        </p>
+<h1>
+Vaibhav<br>
+Poetry
+</h1>
 
 
-        <div class="hero-buttons">
+<p class="hero-subtitle">
 
-            <button
-                class="hero-button primary"
-                onclick="openPage('poems')"
-            >
-                कविताएँ पढ़ें
-            </button>
+"शब्द वही खूबसूरत होते हैं,
+जो दिल से निकलकर दिल तक पहुँचते हैं।"
 
+<br><br>
 
-            <button
-                class="hero-button secondary"
-                onclick="openPage('shayari')"
-            >
-                शायरियाँ
-            </button>
+वैभव यादव की मौलिक रचनाओं,
+विचारों और भावनाओं का एक डिजिटल संग्रह।
+
+</p>
 
 
-            <button
-                class="hero-button secondary"
-                onclick="openPage('quotes')"
-            >
-                Quotes
-            </button>
+<div class="hero-buttons">
 
-        </div>
+<button
+class="hero-button primary"
+onclick="openPage('poems')"
+>
+कविताएँ पढ़ें
+</button>
 
-    </div>
+<button
+class="hero-button secondary"
+onclick="openPage('shayari')"
+>
+शायरियाँ
+</button>
+
+<button
+class="hero-button secondary"
+onclick="openPage('quotes')"
+>
+Quotes
+</button>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     POEMS SECTION
-========================= -->
+<!-- =====================================================
+     POEMS
+===================================================== -->
 
 <section
-    id="poems"
-    class="page"
+id="poems"
+class="page"
 >
 
-    <div class="container">
+<div class="container">
 
 
-        <div class="section-heading">
+<div class="section-heading">
 
-            <span>
-                VAIBHAV YADAV
-            </span>
+<span>
+VAIBHAV YADAV
+</span>
 
-            <h2>
-                कविताएँ
-            </h2>
+<h2>
+हिंदी कविताएँ
+</h2>
 
-            <p>
-                विचारों और भावनाओं को शब्द देने का एक प्रयास।
-            </p>
+<p>
+वैभव यादव द्वारा लिखी गई मौलिक कविताओं का संग्रह।
+</p>
 
-        </div>
-
-
-        <!-- कविता search -->
-
-        <div class="search-box">
-
-            <input
-                type="text"
-                id="poemSearch"
-                placeholder="🔍 कविता खोजें..."
-                onkeyup="searchPoems()"
-            >
-
-        </div>
+</div>
 
 
-        <!-- =========================
-             POEM TITLES
-        ========================== -->
+<div class="search-box">
 
-        <div
-            id="poemList"
-            class="content-list"
-        >
+<input
+type="search"
+id="poemSearch"
+placeholder="🔍 कविता खोजें..."
+aria-label="कविता खोजें"
+onkeyup="searchPoems()"
+/>
 
-
-            <!-- कविता 1 -->
-
-            <button
-                class="content-button"
-                data-title="सत्य की असली पहचान"
-                onclick="openContent('poem1')"
-            >
-
-                <span class="content-type">
-                    कविता
-                </span>
-
-                सत्य की असली पहचान
-
-            </button>
+</div>
 
 
-            <!-- कविता 2 -->
-
-            <button
-                class="content-button"
-                data-title="इश्क वह चीज नहीं"
-                onclick="openContent('poem2')"
-            >
-
-                <span class="content-type">
-                    कविता
-                </span>
-
-                इश्क वह चीज नहीं
-
-            </button>
+<div
+id="poemList"
+class="content-list"
+>
 
 
-            <!-- कविता 3 -->
+<!-- =====================================================
+     POEM 1
+===================================================== -->
 
-            <button
-                class="content-button"
-                data-title="बिना समझ के किया गया दान"
-                onclick="openContent('poem3')"
-            >
+<button
+class="content-button"
+data-title="सत्य की असली पहचान"
+onclick="openContent('poem1')"
+>
 
-                <span class="content-type">
-                    कविता
-                </span>
+<span class="content-type">
+कविता
+</span>
 
-                बिना समझ के किया गया दान
+सत्य की असली पहचान
 
-            </button>
-
-
-            <div
-                id="poemNoResults"
-                class="no-results"
-            >
-                आपकी खोज से कोई कविता नहीं मिली।
-            </div>
-
-        </div>
+</button>
 
 
-        <!-- =========================
-             POEM 1
-        ========================== -->
+<!-- =====================================================
+     POEM 2
+===================================================== -->
 
-        <div
-            id="poem1"
-            class="content-view"
-        >
+<button
+class="content-button"
+data-title="इश्क वह चीज नहीं"
+onclick="openContent('poem2')"
+>
 
-            <button
-                class="back-button"
-                onclick="closeContent('poem1')"
-            >
-                ← सभी कविताएँ
-            </button>
+<span class="content-type">
+कविता
+</span>
 
+इश्क वह चीज नहीं
 
-            <article class="content-card">
-
-                <h2>
-                    सत्य की असली पहचान
-                </h2>
+</button>
 
 
-                <div class="content-text">
+<!-- =====================================================
+     POEM 3
+===================================================== -->
+
+<button
+class="content-button"
+data-title="बिना समझ के किया गया दान"
+onclick="openContent('poem3')"
+>
+
+<span class="content-type">
+कविता
+</span>
+
+बिना समझ के किया गया दान
+
+</button>
+
+
+<div
+id="poemNoResults"
+class="no-results"
+>
+आपकी खोज से कोई कविता नहीं मिली।
+</div>
+
+
+</div>
+
+
+<!-- =====================================================
+     POEM 1 FULL
+===================================================== -->
+
+<article
+id="poem1"
+class="content-view"
+>
+
+<button
+class="back-button"
+onclick="closeContent('poem1')"
+>
+← सभी कविताएँ
+</button>
+
+
+<div class="content-card">
+
+
+<h2>
+सत्य की असली पहचान
+</h2>
+
+
+<div class="content-text">
 
 सत्यता कभी भीड़ से घबराती नहीं,
 अकेले खड़े होने में ज़रा भी हिचकिचाती नहीं।
@@ -1335,55 +1325,57 @@ footer strong{
 आकाश चीज कभी ढूंढी नहीं जाती
 बादलों से यह छुप नहीं जाती
 सत्य की नेती नेती कर कोशिश की तुमने इसे छुपाने की
-यह तो वह अपार सागर है जिसकी jurrat ना करता सूरज भी  सुखाने की
+यह तो वह अपार सागर है जिसकी jurrat ना करता सूरज भी सुखाने की
 
 कितना भी अँधकार हो,
 प्रकाश को छिपा नहीं सकता।
 कहते हैं न—
-चंद्रमा भी अपनी रोशनी बिन सूरज दिखा नहीं सकता
+चंद्रमा भी अपनी रोशनी बिन सूरज दिखा नहीं सकता।
 
 न जाने कैसे जी लेते हो तुम
 सत्य के बिना अपना यह जीवन,
 ज़रा भी नहीं घबराता क्या
 तुम्हारा यह चेतन मन?
 
-                </div>
+</div>
 
 
-                <div class="author">
-                    ~ वैभव यादव
-                </div>
-
-            </article>
-
-        </div>
+<div class="author">
+~ वैभव यादव
+</div>
 
 
-        <!-- =========================
-             POEM 2
-        ========================== -->
+</div>
 
-        <div
-            id="poem2"
-            class="content-view"
-        >
-
-            <button
-                class="back-button"
-                onclick="closeContent('poem2')"
-            >
-                ← सभी कविताएँ
-            </button>
+</article>
 
 
-            <article class="content-card">
+<!-- =====================================================
+     POEM 2 FULL
+===================================================== -->
 
-                <h2>
-                    इश्क वह चीज नहीं
-                </h2>
+<article
+id="poem2"
+class="content-view"
+>
+
+<button
+class="back-button"
+onclick="closeContent('poem2')"
+>
+← सभी कविताएँ
+</button>
 
 
-                <div class="content-text">
+<div class="content-card">
+
+
+<h2>
+इश्क वह चीज नहीं
+</h2>
+
+
+<div class="content-text">
 
 इश्क वह चीज नहीं जो राहों में मिल जाया करें,
 इश्क कोई सौदा नहीं जो बाजारों में हो जाया करें।
@@ -1394,65 +1386,67 @@ footer strong{
 जिसे तुम इश्क समझते हो वह तो मोह का जाल है,
 जहां मैं और मेरा बरकरार है वहां इश्क नहीं केवल दकियानूसी ख्याल है।
 
-इश्क किसी चेहरे का नहीं ,बस चेतन के उजियारे का नाम है।
-जो तुम्हें तुमसे मुक्त कर दे ,यही तो इश्क का नाम है।
+इश्क किसी चेहरे का नहीं, बस चेतन के उजियारे का नाम है।
+जो तुम्हें तुमसे मुक्त कर दे, यही तो इश्क का नाम है।
 
-                </div>
-
-
-                <div class="author">
-                    ~ वैभव यादव
-                </div>
-
-            </article>
-
-        </div>
+</div>
 
 
-        <!-- =========================
-             POEM 3
-        ========================== -->
-
-        <div
-            id="poem3"
-            class="content-view"
-        >
-
-            <button
-                class="back-button"
-                onclick="closeContent('poem3')"
-            >
-                ← सभी कविताएँ
-            </button>
+<div class="author">
+~ वैभव यादव
+</div>
 
 
-            <article class="content-card">
+</div>
 
-                <h2>
-                    बिना समझ के किया गया दान
-                </h2>
+</article>
 
 
-                <div class="content-text">
+<!-- =====================================================
+     POEM 3 FULL
+===================================================== -->
 
-करता है हर वो व्यक्ति दान, 
-जिसके भीतर नहीं है ज्ञान,  
-तुम कर देते हो लाखों रूपों का दान 
+<article
+id="poem3"
+class="content-view"
+>
+
+<button
+class="back-button"
+onclick="closeContent('poem3')"
+>
+← सभी कविताएँ
+</button>
+
+
+<div class="content-card">
+
+
+<h2>
+बिना समझ के किया गया दान
+</h2>
+
+
+<div class="content-text">
+
+करता है हर वो व्यक्ति दान,
+जिसके भीतर नहीं है ज्ञान,
+तुम कर देते हो लाखों रूपों का दान
 पर नहीं कर सकते किसी जीव का सम्मान।
 
-यह सोचकर कर देते हो दान, 
+यह सोचकर कर देते हो दान,
 कि सिद्ध होंगे तुम्हारे अरमान,
 
 पर क्यों रह जाते हो उससे अनजान,
 जो आयेगा इससे परिणाम।
 
 पूछना कभी खुद से की क्यों करते हो दान,
-  
+
 और फिर कहा जाता है तुम्हारा ये धन धान।
 
 जवाब मिलेंगे की -
 नहीं जानते क्यों करते है हम दान,
-  
+
 और जिसको देकर आये हम,
 वो कर रहा धूम्रपान।
 
@@ -1461,7 +1455,7 @@ footer strong{
 दान नहीं है यश कमाना।
 
 दान वही जो दर्द मिटाए,
-  
+
 किसी बुझते दीप को फिर जलाए।
 
 दान अगर अंधा होगा,
@@ -1484,172 +1478,174 @@ footer strong{
 समाज का मुकद्दर बदलता है,
 
 वरना दान के नाम पर दिखावा,
-सिर्फ जेबें ही बदलता है
+सिर्फ जेबें ही बदलता है।
 
-                </div>
-
-
-                <div class="author">
-                    ~ वैभव यादव
-                </div>
-
-            </article>
-
-        </div>
+</div>
 
 
-    </div>
+<div class="author">
+~ वैभव यादव
+</div>
+
+
+</div>
+
+</article>
+
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     SHAYARI SECTION
-========================= -->
+<!-- =====================================================
+     SHAYARI
+===================================================== -->
 
 <section
-    id="shayari"
-    class="page"
+id="shayari"
+class="page"
 >
 
-    <div class="container">
+<div class="container">
 
 
-        <div class="section-heading">
+<div class="section-heading">
 
-            <span>
-                SHAYARI
-            </span>
+<span>
+SHAYARI
+</span>
 
-            <h2>
-                शायरियाँ
-            </h2>
+<h2>
+हिंदी शायरियाँ
+</h2>
 
-            <p>
-                यहाँ आपकी शायरियाँ अलग से दिखाई जाएँगी।
-            </p>
+<p>
+वैभव यादव की मौलिक शायरियों का संग्रह।
+</p>
 
-        </div>
-
-
-        <div class="search-box">
-
-            <input
-                type="text"
-                id="shayariSearch"
-                placeholder="🔍 शायरी खोजें..."
-                onkeyup="searchShayari()"
-            >
-
-        </div>
+</div>
 
 
-        <div class="empty-box">
+<div class="search-box">
 
-            अभी यहाँ कोई शायरी नहीं जोड़ी गई है।
+<input
+type="search"
+id="shayariSearch"
+placeholder="🔍 शायरी खोजें..."
+aria-label="शायरी खोजें"
+/>
 
-            <br><br>
+</div>
 
-            आप जो शायरी देंगे,
-            उसे इसी section में जोड़ा जाएगा।
 
-        </div>
+<div class="empty-box">
 
-    </div>
+अभी कोई शायरी नहीं जोड़ी गई है।
+
+<br><br>
+
+आप जो शायरी देंगे,
+उसे इसी section में जोड़ा जाएगा।
+
+</div>
+
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     QUOTES SECTION
-========================= -->
+<!-- =====================================================
+     QUOTES
+===================================================== -->
 
 <section
-    id="quotes"
-    class="page"
+id="quotes"
+class="page"
 >
 
-    <div class="container">
+<div class="container">
 
 
-        <div class="section-heading">
+<div class="section-heading">
 
-            <span>
-                QUOTES
-            </span>
+<span>
+QUOTES
+</span>
 
-            <h2>
-                Quotes
-            </h2>
+<h2>
+विचार और Quotes
+</h2>
 
-            <p>
-                आपके विचार और Quotes यहाँ अलग से दिखाई देंगे।
-            </p>
+<p>
+वैभव यादव के विचार और Quotes।
+</p>
 
-        </div>
-
-
-        <div class="search-box">
-
-            <input
-                type="text"
-                id="quoteSearch"
-                placeholder="🔍 Quote खोजें..."
-                onkeyup="searchQuotes()"
-            >
-
-        </div>
+</div>
 
 
-        <div class="empty-box">
+<div class="search-box">
 
-            अभी यहाँ कोई Quote नहीं जोड़ा गया है।
+<input
+type="search"
+id="quoteSearch"
+placeholder="🔍 Quote खोजें..."
+aria-label="Quote खोजें"
+/>
 
-            <br><br>
+</div>
 
-            आप जो Quote देंगे,
-            उसे इसी section में जोड़ा जाएगा।
 
-        </div>
+<div class="empty-box">
 
-    </div>
+अभी कोई Quote नहीं जोड़ा गया है।
+
+<br><br>
+
+आप जो Quote देंगे,
+उसे इसी section में जोड़ा जाएगा।
+
+</div>
+
+
+</div>
 
 </section>
 
 
-<!-- =========================
+<!-- =====================================================
      FOOTER
-========================= -->
+===================================================== -->
 
 <footer>
 
-    <p>
+<p>
 
-        © 2026
+© 2026
 
-        <strong>
-            Vaibhav Poetry
-        </strong>
+<strong>
+Vaibhav Poetry
+</strong>
 
-    </p>
+</p>
 
-    <p>
-        वैभव यादव द्वारा लिखित रचनाएँ ❤️
-    </p>
+<p>
+वैभव यादव द्वारा लिखित रचनाएँ
+</p>
 
-    <p style="margin-top:10px;">
-        शब्दों से विचारों तक।
-    </p>
+<p style="margin-top:10px;">
+शब्दों से विचारों तक।
+</p>
 
 </footer>
 
 
 <script>
 
-
-/* =========================
-   PAGE OPEN
-========================= */
+/* =====================================================
+   PAGE NAVIGATION
+===================================================== */
 
 let introTimer;
 
@@ -1659,12 +1655,8 @@ function openPage(pageId){
     clearTimeout(introTimer);
 
 
-    const intro =
-    document.getElementById("introScreen");
-
-
     /*
-       पहले सभी pages बंद
+       सभी pages hide
     */
 
     document
@@ -1677,8 +1669,7 @@ function openPage(pageId){
 
 
     /*
-       अगर home है तो सीधे खोलें
-       बाकी sections में पहले logo दिखेगा
+       Home पर logo animation नहीं
     */
 
     if(pageId === "home"){
@@ -1695,14 +1686,17 @@ function openPage(pageId){
 
 
     /*
-       पहले logo screen
+       Section खोलने से पहले
+       Vaibhav Poetry logo
     */
+
+    const intro =
+    document.getElementById("introScreen");
 
     intro.classList.add("show");
 
 
-    introTimer =
-    setTimeout(function(){
+    introTimer = setTimeout(function(){
 
         intro.classList.remove("show");
 
@@ -1714,30 +1708,21 @@ function openPage(pageId){
 
         window.scrollTo(0,0);
 
-
-    },1100);
+    },1000);
 
 }
 
 
-/* =========================
+/* =====================================================
    OPEN POEM
-========================= */
+===================================================== */
 
 function openContent(contentId){
-
-    /*
-       poem list hide
-    */
 
     document
     .getElementById("poemList")
     .style.display="none";
 
-
-    /*
-       सभी open content बंद
-    */
 
     document
     .querySelectorAll(".content-view")
@@ -1747,10 +1732,6 @@ function openContent(contentId){
 
     });
 
-
-    /*
-       selected poem open
-    */
 
     document
     .getElementById(contentId)
@@ -1762,9 +1743,9 @@ function openContent(contentId){
 }
 
 
-/* =========================
+/* =====================================================
    CLOSE POEM
-========================= */
+===================================================== */
 
 function closeContent(contentId){
 
@@ -1783,9 +1764,9 @@ function closeContent(contentId){
 }
 
 
-/* =========================
+/* =====================================================
    POEM SEARCH
-========================= */
+===================================================== */
 
 function searchPoems(){
 
@@ -1811,7 +1792,7 @@ function searchPoems(){
 
         const title =
         button
-        .innerText
+        .getAttribute("data-title")
         .toLowerCase();
 
 
@@ -1834,46 +1815,16 @@ function searchPoems(){
     document
     .getElementById("poemNoResults")
     .style.display =
-    found===0
+    found === 0
     ? "block"
     : "none";
 
 }
 
 
-/* =========================
-   SHAYARI SEARCH
-========================= */
-
-function searchShayari(){
-
-    /*
-       अभी शायरियाँ नहीं हैं।
-       आगे content add होने पर
-       इसी search को इस्तेमाल किया जाएगा।
-    */
-
-}
-
-
-/* =========================
-   QUOTE SEARCH
-========================= */
-
-function searchQuotes(){
-
-    /*
-       अभी Quotes नहीं हैं।
-       आगे content add होने पर
-       इसी search को इस्तेमाल किया जाएगा।
-    */
-
-}
-
-
-/* =========================
-   ESCAPE KEY
-========================= */
+/* =====================================================
+   ESCAPE
+===================================================== */
 
 document.addEventListener(
 "keydown",
@@ -1888,7 +1839,6 @@ function(event){
     }
 
 });
-
 
 </script>
 
