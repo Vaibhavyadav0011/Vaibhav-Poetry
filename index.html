@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Google/Search Engine information -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whispers & Verses | A Poetry Collection</title>
+  <meta
+    name="description"
+    content="Whispers & Verses is a collection of heartfelt poetry about love, life, nature, dreams and the human soul."
+  >
+  <meta
+    name="keywords"
+    content="poetry, poems, love poems, life poems, nature poetry, romantic poetry, poetry collection"
+  >
+  <meta name="author" content="Your Name">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      color: #332b35;
+      background: #fbf7f1;
+      line-height: 1.8;
+    }
+
+    /* NAVIGATION */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(251, 247, 241, 0.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #e8ddd2;
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 15px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      color: #713f58;
+      font-weight: bold;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4d4149;
+      margin-left: 25px;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: #a65d7a;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 25px 80px;
+      background:
+        radial-gradient(circle at top left, #ead9df 0, transparent 35%),
+        radial-gradient(circle at bottom right, #e6d9c5 0, transparent 35%),
+        #fbf7f1;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .small-title {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 0.8rem;
+      color: #a65d7a;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      line-height: 1;
+      color: #3f2d38;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      font-size: 1.2rem;
+      color: #6e6268;
+      font-style: italic;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 35px;
+      padding: 13px 28px;
+      background: #713f58;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+
+    .button:hover {
+      background: #a65d7a;
+      transform: translateY(-2px);
+    }
+
+    /* GENERAL */
+    section {
+      padding: 90px 25px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.7rem;
+      color: #493540;
+      margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #81747a;
+      margin-bottom: 45px;
+    }
+
+    /* SEARCH */
+    .search-box {
+      max-width: 600px;
+      margin: 0 auto 35px;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 16px 20px;
+      border: 1px solid #dfd0d4;
+      border-radius: 30px;
+      background: white;
+      font-family: inherit;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .search-box input:focus {
+      border-color: #a65d7a;
+    }
+
+    /* POEMS */
+    .poems {
+      background: #f5eee7;
+    }
+
+    .poem-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .poem-card {
+      background: #fffdf9;
+      padding: 30px;
+      border-radius: 14px;
+      border: 1px solid #eadfd6;
+      box-shadow: 0 10px 30px rgba(65, 44, 50, 0.06);
+      transition: 0.3s;
+    }
+
+    .poem-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 35px rgba(65, 44, 50, 0.12);
+    }
+
+    .poem-category {
+      color: #a65d7a;
+      text-transform: uppercase;
+      font-size: 0.72rem;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    .poem-card h3 {
+      font-size: 1.7rem;
+      color: #493540;
+      margin-bottom: 15px;
+    }
+
+    .poem-preview {
+      color: #70656a;
+      font-style: italic;
+    }
+
+    .poem-full {
+      display: none;
+      white-space: pre-line;
+      margin-top: 20px;
+      color: #50464b;
+    }
+
+    .read-button {
+      margin-top: 20px;
+      background: transparent;
+      border: 1px solid #a65d7a;
+      color: #8a4c67;
+      padding: 8px 17px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .read-button:hover {
+      background: #a65d7a;
+      color: white;
+    }
+
+    /* ABOUT */
+    .about {
+      text-align: center;
+    }
+
+    .about-text {
+      max-width: 750px;
+      margin: auto;
+      font-size: 1.15rem;
+      color: #6c6066;
+    }
+
+    /* QUOTE */
+    .quote {
+      background: #713f58;
+      color: white;
+      text-align: center;
+    }
+
+    .quote blockquote {
+      max-width: 800px;
+      margin: auto;
+      font-size: clamp(1.6rem, 4vw, 2.7rem);
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .quote cite {
+      display: block;
+      margin-top: 20px;
+      opacity: 0.75;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #30242b;
+      color: #d9ccd1;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    footer a {
+      color: #e9b8cb;
+      text-decoration: none;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 800px) {
+      .poem-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      nav a {
+        margin-left: 10px;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .poem-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-container {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      nav a {
+        font-size: 0.85rem;
+      }
+
+      .hero {
+        padding-top: 150px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-container">
+      <div class="logo">Whispers & Verses</div>
+
+      <div>
+        <a href="#home">Home</a>
+        <a href="#poems">Poems</a>
+        <a href="#about">About</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+
+      <div class="small-title">A collection of words & feelings</div>
+
+      <h1>Whispers &<br>Verses</h1>
+
+      <p>
+        "Some feelings are too deep for conversation,
+        so we turn them into poetry."
+      </p>
+
+      <a href="#poems" class="button">Explore the Poems</a>
+
+    </div>
+  </section>
+
+
+  <!-- POEMS -->
+  <section class="poems" id="poems">
+
+    <div class="container">
+
+      <h2 class="section-title">The Poetry</h2>
+
+      <p class="section-subtitle">
+        Words for the moments we cannot explain.
+      </p>
+
+      <div class="search-box">
+        <input
+          type="text"
+          id="search"
+          placeholder="Search poems..."
+          onkeyup="searchPoems()"
+        >
+      </div>
+
+
+      <div class="poem-grid">
+
+        <!-- POEM 1 -->
+        <article class="poem-card">
+
+          <div class="poem-category">Love</div>
+
+          <h3>Where You Are</h3>
+
+          <p class="poem-preview">
+            "I found a little piece of home
+            in the sound of your name..."
+          </p>
+
+          <div class="poem-full">
+I found a little piece of home
+in the sound of your name.
+
+A quiet place inside my heart
+where nothing stays the same.
+
+And when the world becomes too loud,
+I think of you once more—
+
+For somehow every road I take
+still leads me to your door.
+          </div>
+
+          <button class="read-button" onclick="togglePoem(this)">
+            Read poem
+          </button>
+
+        </article>
+
+
+        <!-- POEM 2 -->
+        <article class="poem-card">
+
+          <div class="poem-category">Life</div>
+
+          <h3>Keep Walking</h3>
+
+          <p class="poem-preview">
+            "The road does not promise easy days,
+            only another sunrise..."
+          </p>
+
+          <div class="poem-full">
+The road does not promise easy days,
+only another sunrise.
+
+So carry your scars,
+carry your dreams,
+and keep walking.
+
+There are flowers
+you have not seen,
+
+and skies
+you have not yet watched
+turn gold.
+          </div>
+
+          <button class="read-button" onclick="togglePoem(this)">
+            Read poem
+          </button>
+
+        </article>
+
+
+        <!-- POEM 3 -->
+        <article class="poem-card">
+
+          <div class="poem-category">Nature</div>
+
+          <h3>After Rain</h3>
+
+          <p class="poem-preview">
+            "The earth remembers how to breathe
+            after the rain..."
+          </p>
+
+          <div class="poem-full">
+The earth remembers how to breathe
+after the rain.
+
+Leaves hold little mirrors
+of the morning sky.
+
+The wind becomes softer,
+the streets become silver,
+
+and for a moment
+the whole world
+feels new again.
+          </div>
+
+          <button class="read-button" onclick="togglePoem(this)">
+            Read poem
+          </button>
+
+        </article>
+
+
+        <!-- POEM 4 -->
+        <article class="poem-card">
+
+          <div class="poem-category">Dreams</div>
+
+          <h3>Someday</h3>
+
+          <p class="poem-preview">
+            "Someday the things you dream about
+            will become memories..."
+          </p>
+
+          <div class="poem-full">
+Someday the things you dream about
+will become memories.
+
+The places you imagined
+will have roads beneath your feet.
+
+So dream without apology.
+
+The future has room
+for every beautiful thing
+you dare to believe.
+          </div>
+
+          <button class="read-button" onclick="togglePoem(this)">
+            Read poem
+          </button>
+
+        </article>
+
+
+        <!-- POEM 5 -->
+        <article class="poem-card">
+
+          <div class="poem-category">Night</div>
+
+          <h3>Moonlight</h3>
+
+          <p class="poem-preview">
+            "The moon never asks the night
+            to be anything but dark..."
+          </p>
+
+          <div class="poem-full">
+The moon never asks the night
+to be anything but dark.
+
+It simply shines,
+
+quietly reminding us
+that even darkness
+can hold a little light.
+          </div>
+
+          <button class="read-button" onclick="togglePoem(this)">
+            Read poem
+          </button>
+
+        </article>
+
+
+        <!-- POEM 6 -->
+        <article class="poem-card">
+
+          <div class="poem-category">Hope</div>
+
+          <h3>Begin Again</h3>
+
+          <p class="poem-preview">
+            "There is no shame in beginning again..."
+          </p>
+
+          <div class="poem-full">
+There is no shame
+in beginning again.
+
+A broken heart
+can still learn to sing.
+
+A tired soul
+can still find morning.
+
+And a life
+can change direction
+with one brave step.
+          </div>
+
+          <button class="read-button" onclick="togglePoem(this)">
+            Read poem
+          </button>
+
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- QUOTE -->
+  <section class="quote">
+
+    <blockquote>
+      "Poetry is the place where the heart
+      gets to speak without interruption."
+    </blockquote>
+
+    <cite>— Whispers & Verses</cite>
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+
+    <div class="container">
+
+      <h2 class="section-title">About This Collection</h2>
+
+      <p class="section-subtitle">
+        A small corner of the internet for big feelings.
+      </p>
+
+      <p class="about-text">
+        Welcome to Whispers & Verses — a collection of poetry
+        inspired by love, life, nature, dreams, heartbreak and hope.
+        Add your own poems and make this space uniquely yours.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>© 2026 Whispers & Verses</p>
+
+    <p>
+      Made with words, silence and a little bit of imagination.
+    </p>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+  <script>
+
+    function togglePoem(button) {
+
+      const poem = button.previousElementSibling;
+
+      if (poem.style.display === "block") {
+
+        poem.style.display = "none";
+        button.textContent = "Read poem";
+
+      } else {
+
+        poem.style.display = "block";
+        button.textContent = "Hide poem";
+
+      }
+    }
+
+
+    function searchPoems() {
+
+      const search =
+        document.getElementById("search").value.toLowerCase();
+
+      const poems =
+        document.querySelectorAll(".poem-card");
+
+      poems.forEach(function(poem) {
+
+        const text = poem.innerText.toLowerCase();
+
+        if (text.includes(search)) {
+          poem.style.display = "";
+        } else {
+          poem.style.display = "none";
+        }
+
+      });
+
+    }
+
+  </script>
+
+</body>
+</html>
